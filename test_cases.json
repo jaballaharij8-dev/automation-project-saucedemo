@@ -1,0 +1,41 @@
+{
+  "menu_burger_test": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "steps": [
+      "open_menu",
+      "verify_options",
+      "click_all_items",
+      "click_about",
+      "return_app",
+      "reset_app",
+      "verify_cart_empty",
+      "logout"
+    ]
+  },
+  "test_open_menu": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "test_verify_options": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "test_click_all_items": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "test_click_about": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "test_reset_app": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "test_logout": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  }
+}
+
