@@ -1,0 +1,57 @@
+{
+  "test_open_menu": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "Test ouverture du menu burger"
+  },
+  "test_verify_options": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "Vérifier les options du menu"
+  },
+  "test_click_all_items": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "Cliquer sur All Items depuis le menu"
+  },
+  "test_click_about": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "Cliquer sur About"
+  },
+  "test_reset_app": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "Réinitialiser l'état de l'app"
+  },
+  "test_logout": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "Se déconnecter via le menu"
+  },
+  "test_nav_from_cart": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "Navigation All Items depuis la page panier"
+  },
+  "test_menu_persistence": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "Persistance du menu après clic invalide"
+  },
+  "test_cart_reset": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "État du panier après reset app"
+  },
+  "test_menu_non_blocking": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "Menu burger comme élément non-bloquant"
+  },
+  "test_multiple_menu_clicks": {
+    "username": "standard_user",
+    "password": "secret_sauce",
+    "description": "Clics multiples rapides sur le bouton burger"
+  }
+}
