@@ -1,74 +1,130 @@
----
-name: CI Automation Project
+name: CI – All Automation Tests (Robot + Selenium + Playwright)
+
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
+    branches: [ main ]
+
 jobs:
+# =========================================================
+# 🟢 JOB 1 – ROBOT FRAMEWORK
+# =========================================================
   robot-framework:
     name: Robot Framework Tests
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
+
       - name: Install Robot dependencies
         run: |
+          pip install --upgrade pip
           pip install robotframework
           pip install robotframework-seleniumlibrary
           pip install robotframework-jsonlibrary
-          pip install selenium
-          pip install webdriver-manager
-      - name: Run Robot tests
-        run: robot robot_tests
+          pip install selenium webdriver-manager
+
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Run Robot Framework tests
+        run: |
+          robot --variable BROWSER:headlesschrome \
+                --outputdir robot-results \
+                test_menu_burger.robot
         continue-on-error: true
+
+      - name: Upload Robot report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-framework-report
+          path: robot-results
+
+# =========================================================
+# 🔵 JOB 2 – SELENIUM PYTEST
+# =========================================================
   selenium-pytest:
     name: Selenium Pytest Tests
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.10"
-      - name: Install Pytest dependencies
+          python-version: "3.11"
+
+      - name: Install Python dependencies
         run: |
-          pip install pytest
-          pip install selenium
-          pip install webdriver-manager
-      - name: Run Pytest tests
-        run: pytest selenium_tests
+          python -m pip install --upgrade pip
+          pip install pytest selenium pytest-html chromedriver-autoinstaller
+
+      - name: Install Chrome
+        shell: powershell
+        run: |
+          choco install googlechrome -y --ignore-checksums
+          choco install chromedriver -y
+
+      - name: Run Selenium Pytest
+        run: |
+          mkdir test-reports
+          pytest Selenium_test1 \
+            --html=test-reports/report.html \
+            --self-contained-html \
+            --junitxml=test-reports/results.xml
         continue-on-error: true
+
+      - name: Upload Selenium reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: selenium-pytest-report
+          path: test-reports
+
+# =========================================================
+# 🟣 JOB 3 – PLAYWRIGHT
+# =========================================================
   playwright:
     name: Playwright E2E Tests
     runs-on: ubuntu-latest
+    timeout-minutes: 60
+
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-      - name: Install Playwright dependencies
-        run: npm install
-        working-directory: playwright_tests
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
-        working-directory: playwright_tests
+
       - name: Run Playwright tests
         run: npx playwright test
-        working-directory: playwright_tests
         continue-on-error: true
-      - name: Upload Playwright report
+
+      - name: Upload Playwright HTML report
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: playwright-report
-          path: playwright_tests/playwright-report
+          path: playwright-report
 
 
         if: always()
