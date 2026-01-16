@@ -1,4 +1,4 @@
-name: CI – All Automation Tests
+name: CI - All Automation Tests
 
 on:
   push:
@@ -8,23 +8,21 @@ on:
 
 jobs:
 
-# =========================================================
-# 🤖 ROBOT FRAMEWORK
-# =========================================================
-  robot-framework:
+  robot-framework-tests:
     name: Robot Framework Tests
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
-      - name: Install Robot dependencies
+      - name: Install Robot Framework dependencies
         run: |
+          pip install --upgrade pip
           pip install robotframework
           pip install robotframework-seleniumlibrary
           pip install robotframework-jsonlibrary
@@ -35,84 +33,54 @@ jobs:
         uses: browser-actions/setup-chrome@v1
 
       - name: Run Robot tests
-        run: |
-          robot --variable BROWSER:headlesschrome --outputdir robot_results robot_tests
-        continue-on-error: true
-
-      - name: Upload Robot report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: robot-report
-          path: robot_results
+        run: robot robot_tests
 
 
-# =========================================================
-# 🐍 SELENIUM + PYTEST
-# =========================================================
-  selenium-pytest:
+  selenium-pytest-tests:
     name: Selenium Pytest Tests
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Python
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.10"
 
-      - name: Install Selenium Pytest deps
+      - name: Install Pytest & Selenium
         run: |
-          pip install pytest
-          pip install selenium
-          pip install webdriver-manager
-          pip install pytest-html
+          pip install --upgrade pip
+          pip install pytest selenium webdriver-manager
+
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
 
       - name: Run Pytest tests
-        run: |
-          python -m pytest Selenium_test1 --junitxml=selenium_results/results.xml
-        continue-on-error: true
-
-      - name: Upload Selenium report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: selenium-report
-          path: selenium_results
+        run: pytest selenium_tests
 
 
-# =========================================================
-# 🎭 PLAYWRIGHT
-# =========================================================
-  playwright:
-    name: Playwright E2E Tests
+  playwright-tests:
+    name: Playwright Tests
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: 18
 
-      - name: Install Playwright dependencies
-        run: npm install
+      - name: Install Node dependencies
         working-directory: playwright_tests
+        run: npm ci
 
       - name: Install Playwright browsers
-        run: npx playwright install --with-deps
         working-directory: playwright_tests
+        run: npx playwright install --with-deps
 
       - name: Run Playwright tests
-        run: npx playwright test
         working-directory: playwright_tests
-        continue-on-error: true
+        run: npx playwright test
 
-      - name: Upload Playwright report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright_tests/playwright-report
