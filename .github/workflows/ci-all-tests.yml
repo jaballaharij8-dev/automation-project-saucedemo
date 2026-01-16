@@ -1,96 +1,90 @@
----
-name: CI – All Automation Tests (Robot + Selenium + Playwright)
+name: CI Automation Project
+
 on:
   push:
-    branches:
-      - main
+    branches: [ "main" ]
   pull_request:
-    branches:
-      - main
+    branches: [ "main" ]
+
 jobs:
+
   robot-framework:
     name: Robot Framework Tests
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Setup Python
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.10"
+
       - name: Install Robot dependencies
         run: |
-          python -m pip install --upgrade pip
           pip install robotframework
           pip install robotframework-seleniumlibrary
           pip install robotframework-jsonlibrary
-          pip install selenium webdriver-manager
-      - name: Install Chrome
-        uses: browser-actions/setup-chrome@v1
-      - name: Run Robot Framework tests
-        run: |
-          robot --variable BROWSER:headlesschrome \
-                --outputdir robot-results \
-                test_menu_burger.robot
+          pip install selenium
+          pip install webdriver-manager
+
+      - name: Run Robot tests
+        run: robot robot_tests
         continue-on-error: true
-      - name: Upload Robot report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: robot-framework-report
-          path: robot-results
+
+
   selenium-pytest:
     name: Selenium Pytest Tests
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Setup Python
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-      - name: Install Selenium dependencies
+          python-version: "3.10"
+
+      - name: Install Pytest dependencies
         run: |
-          python -m pip install --upgrade pip
-          pip install pytest selenium pytest-html chromedriver-autoinstaller
-      - name: Install Chrome
-        shell: powershell
-        run: |
-          choco install googlechrome -y --ignore-checksums
-          choco install chromedriver -y
-      - name: Run Selenium Pytest tests
-        run: |
-          mkdir test-reports
-          pytest Selenium_test1 \
-            --html=test-reports/report.html \
-            --self-contained-html \
-            --junitxml=test-reports/results.xml
+          pip install pytest
+          pip install selenium
+          pip install webdriver-manager
+
+      - name: Run Pytest tests
+        run: pytest selenium_tests
         continue-on-error: true
-      - name: Upload Selenium reports
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: selenium-pytest-report
-          path: test-reports
+
+
   playwright:
     name: Playwright E2E Tests
     runs-on: ubuntu-latest
-    timeout-minutes: 60
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "18"
-      - name: Install Node dependencies
+
+      - name: Install Playwright dependencies
         run: npm install
+        working-directory: playwright_tests
+
       - name: Install Playwright browsers
         run: npx playwright install --with-deps
+        working-directory: playwright_tests
+
       - name: Run Playwright tests
         run: npx playwright test
+        working-directory: playwright_tests
         continue-on-error: true
+
       - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright_tests/playwright-report
+
         if: always()
         uses: actions/upload-artifact@v4
         with:
