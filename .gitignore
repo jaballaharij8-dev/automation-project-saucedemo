@@ -1,0 +1,42 @@
+
+# ========================
+# Playwright
+# ========================
+node_modules/
+test-results/
+playwright-report/
+blob-report/
+playwright/.cache/
+playwright/.auth/
+
+# ========================
+# Selenium
+# ========================
+downloads/
+screenshots/
+selenium-reports/
+
+# WebDrivers
+chromedriver*
+geckodriver*
+msedgedriver*
+
+# ========================
+# Robot Framework
+# ========================
+log.html
+report.html
+output.xml
+
+# ========================
+# Python
+# ========================
+__pycache__/
+*.pyc
+
+# ========================
+# Env / IDE
+# ========================
+.env
+.vscode/
+.idea/

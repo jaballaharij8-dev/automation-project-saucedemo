@@ -1,0 +1,21 @@
+{
+  "url": "https://www.saucedemo.com/",
+  "user": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "selectors": {
+    "userInput": "[data-test='username']",
+    "passInput": "[data-test='password']",
+    "loginBtn": "[data-test='login-button']",
+    "filterLogo": "#header_container > div.header_secondary_container > div > span > select",
+    "activeFilter": ".active_option",
+    "itemPrice": ".inventory_item_price",
+    "itemName": ".inventory_item_name"
+  },
+  "values": {
+    "nameAtoZ": "az",
+    "lowToHigh": "lohi",
+    "highToLow": "hilo"
+  }
+}

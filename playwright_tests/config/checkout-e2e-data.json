@@ -1,0 +1,40 @@
+{
+  "test_suite_name": "E2E - Processus de paiement complet",
+  "base_url": "https://www.saucedemo.com/",
+  "login": {
+    "username": "standard_user",
+    "password": "secret_sauce"
+  },
+  "checkout_user": {
+    "first_name": "Test",
+    "last_name": "User",
+    "postal_code": "12345"
+  },
+  "selectors": {
+    "username": "[data-test='username']",
+    "password": "[data-test='password']",
+    "login_button": "[data-test='login-button']",
+    "cart_item_name": ".cart_item .inventory_item_name",
+    "cart_item_price": ".cart_item .inventory_item_price",
+    "checkout_button": "[data-test='checkout']",
+    "first_name": "[data-test='firstName']",
+    "last_name": "[data-test='lastName']",
+    "postal_code": "[data-test='postalCode']",
+    "continue_button": "[data-test='continue']",
+    "finish_button": "[data-test='finish']",
+    "back_home": "[data-test='back-to-products']",
+    "shopping_cart": ".shopping_cart_link",
+    "shopping_cart_badge": ".shopping_cart_badge"
+  },
+  "products": [
+    { "name": "Sauce Labs Backpack", "expected_price": "$29.99" },
+    { "name": "Sauce Labs Bike Light", "expected_price": "$9.99" },
+    { "name": "Sauce Labs Bolt T-Shirt", "expected_price": "$15.99" },
+    { "name": "Sauce Labs Fleece Jacket", "expected_price": "$49.99" },
+    { "name": "Sauce Labs Onesie", "expected_price": "$7.99" },
+    { "name": "Test.allTheThings() T-Shirt (Red)", "expected_price": "$15.99" }
+  ],
+  "expected_messages": {
+    "order_complete": "Thank you for your order!"
+  }
+}
