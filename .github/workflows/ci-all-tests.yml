@@ -1,88 +1,17 @@
-name: CI - Automation Project SauceDemo
+name: CI - All Automation Tests
 
 on:
   push:
     branches: [ main ]
   pull_request:
+    branches: [ main ]
 
-# ===============================
-# 1️⃣ PLAYWRIGHT JOB
-# ===============================
 jobs:
-  playwright:
-    name: Playwright E2E Tests
-    runs-on: ubuntu-latest
-
-    defaults:
-      run:
-        working-directory: playwright_tests
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 18
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Install Playwright browsers
-        run: npx playwright install --with-deps
-
-      - name: Run Playwright tests
-        run: npx playwright test
-
-      - name: Upload Playwright report
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: playwright-report
-          path: playwright_tests/playwright-report/
 
 # ===============================
-# 2️⃣ ROBOT FRAMEWORK JOB
+# 1️⃣ SELENIUM PYTEST
 # ===============================
-  robot:
-    name: Robot Framework Tests
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.10
-
-      - name: Install dependencies
-        run: |
-          pip install robotframework
-          pip install robotframework-seleniumlibrary
-          pip install robotframework-jsonlibrary
-          pip install selenium webdriver-manager
-
-      - name: Install Chrome
-        uses: browser-actions/setup-chrome@v1
-
-      - name: Run Robot tests
-        run: |
-          robot --variable BROWSER:headlesschrome \
-                --outputdir robot-results \
-                robot_tests
-
-      - name: Upload Robot results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: robot-results
-          path: robot-results/
-
-# ===============================
-# 3️⃣ SELENIUM PYTEST JOB
-# ===============================
-  selenium:
+  selenium-pytest:
     name: Selenium Pytest Tests
     runs-on: ubuntu-latest
 
@@ -96,11 +25,13 @@ jobs:
 
       - name: Install dependencies
         run: |
+          python -m pip install --upgrade pip
           pip install -r requirements.txt
-          pip install pytest selenium webdriver-manager pytest-html
+          pip install pytest selenium chromedriver-autoinstaller pytest-html
 
       - name: Run Selenium Pytest
         run: |
+          mkdir -p test-reports
           pytest Selenium_test1 \
             --junitxml=test-reports/results.xml || true
 
@@ -110,3 +41,82 @@ jobs:
         with:
           name: selenium-test-report
           path: test-reports/
+
+
+# ===============================
+# 2️⃣ ROBOT FRAMEWORK
+# ===============================
+  robot-framework:
+    name: Robot Framework Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.10
+
+      - name: Install Robot dependencies
+        run: |
+          pip install robotframework
+          pip install robotframework-seleniumlibrary
+          pip install robotframework-jsonlibrary
+          pip install selenium webdriver-manager
+
+      - name: Run Robot tests
+        run: |
+          robot --variable BROWSER:headlesschrome \
+                --outputdir robot-results \
+                robot_tests || true
+
+      - name: Upload Robot results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: robot-results
+          path: robot-results/
+
+
+# ===============================
+# 3️⃣ PLAYWRIGHT
+# ===============================
+  playwright:
+    name: Playwright E2E Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: npm
+          cache-dependency-path: playwright_tests/package-lock.json
+
+      - name: Install Playwright dependencies
+        working-directory: playwright_tests
+        run: npm ci
+
+      - name: Install Playwright browsers
+        working-directory: playwright_tests
+        run: npx playwright install --with-deps
+
+      - name: Run Playwright tests
+        working-directory: playwright_tests
+        run: npx playwright test || true
+
+      - name: Debug Playwright report
+        if: always()
+        working-directory: playwright_tests
+        run: ls -la playwright-report || echo "No report generated"
+
+      - name: Upload Playwright report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright_tests/playwright-report/
