@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 5.0 (Python 3.14.0 on win32)" generated="20260115 10:09:49.529" rpa="false" schemaversion="3">
-<suite id="s1" name="Test Plus" source="C:\automation-project-saucedemo\v2saucedemo\test_plus.robot">
+<robot generator="Robot 5.0 (Python 3.14.0 on win32)" generated="20260115 11:07:17.673" rpa="false" schemaversion="3">
+<suite id="s1" name="Test Menu Burger" source="C:\automation-project-saucedemo\test_menu_burger.robot">
 <test id="s1-t1" name="Test Open Menu" line="24">
 <kw name="Setup Test" type="SETUP">
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260115 10:09:50.018" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20260115 10:09:50.017" endtime="20260115 10:09:52.658"/>
+<msg timestamp="20260115 11:07:18.319" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260115 11:07:18.319" endtime="20260115 11:07:23.666"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260115 10:09:52.658" endtime="20260115 10:09:52.760"/>
+<status status="PASS" starttime="20260115 11:07:23.667" endtime="20260115 11:07:23.867"/>
 </kw>
-<status status="PASS" starttime="20260115 10:09:50.017" endtime="20260115 10:09:52.760"/>
+<status status="PASS" starttime="20260115 11:07:18.318" endtime="20260115 11:07:23.867"/>
 </kw>
 <kw name="Load Test Data">
 <arg>test_open_menu</arg>
@@ -22,25 +22,25 @@
 <var>${json}</var>
 <arg>${JSON_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20260115 10:09:52.770" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
-<status status="PASS" starttime="20260115 10:09:52.768" endtime="20260115 10:09:52.770"/>
+<msg timestamp="20260115 11:07:24.060" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
+<status status="PASS" starttime="20260115 11:07:23.894" endtime="20260115 11:07:24.060"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${test}</var>
 <arg>${json}</arg>
 <arg>${test_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:09:52.778" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}</msg>
-<status status="PASS" starttime="20260115 10:09:52.770" endtime="20260115 10:09:52.778"/>
+<msg timestamp="20260115 11:07:24.061" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}</msg>
+<status status="PASS" starttime="20260115 11:07:24.060" endtime="20260115 11:07:24.061"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${TEST_DATA}</arg>
 <arg>${test}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20260115 10:09:52.781" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}</msg>
-<status status="PASS" starttime="20260115 10:09:52.778" endtime="20260115 10:09:52.781"/>
+<msg timestamp="20260115 11:07:24.076" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}</msg>
+<status status="PASS" starttime="20260115 11:07:24.061" endtime="20260115 11:07:24.076"/>
 </kw>
-<status status="PASS" starttime="20260115 10:09:52.768" endtime="20260115 10:09:52.781"/>
+<status status="PASS" starttime="20260115 11:07:23.894" endtime="20260115 11:07:24.076"/>
 </kw>
 <kw name="Login">
 <kw name="Get From Dictionary" library="Collections">
@@ -48,38 +48,38 @@
 <arg>${TEST_DATA}</arg>
 <arg>username</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:09:52.796" level="INFO">${username} = standard_user</msg>
-<status status="PASS" starttime="20260115 10:09:52.796" endtime="20260115 10:09:52.796"/>
+<msg timestamp="20260115 11:07:24.174" level="INFO">${username} = standard_user</msg>
+<status status="PASS" starttime="20260115 11:07:24.173" endtime="20260115 11:07:24.174"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${password}</var>
 <arg>${TEST_DATA}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:09:52.797" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20260115 10:09:52.797" endtime="20260115 10:09:52.797"/>
+<msg timestamp="20260115 11:07:24.178" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20260115 11:07:24.174" endtime="20260115 11:07:24.178"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:09:52.800" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20260115 10:09:52.797" endtime="20260115 10:09:53.747"/>
+<msg timestamp="20260115 11:07:24.193" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260115 11:07:24.178" endtime="20260115 11:07:25.064"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:09:53.749" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20260115 10:09:53.970" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20260115 10:09:54.124" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20260115 10:09:53.748" endtime="20260115 10:09:54.125"/>
+<msg timestamp="20260115 11:07:25.065" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260115 11:07:25.207" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260115 11:07:25.291" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260115 11:07:25.064" endtime="20260115 11:07:25.291"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260115 10:09:54.125" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20260115 10:09:54.125" endtime="20260115 10:09:54.356"/>
+<msg timestamp="20260115 11:07:25.292" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260115 11:07:25.291" endtime="20260115 11:07:25.508"/>
 </kw>
 <kw name="Handle Password Popup">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -90,68 +90,68 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:09:54.698" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260115 10:09:54.699" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
-<status status="FAIL" starttime="20260115 10:09:54.357" endtime="20260115 10:09:54.706"/>
+<msg timestamp="20260115 11:07:25.840" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260115 11:07:25.842" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
+<status status="FAIL" starttime="20260115 11:07:25.510" endtime="20260115 11:07:25.855"/>
 </kw>
-<msg timestamp="20260115 10:09:54.706" level="INFO">${popup_exists} = False</msg>
-<status status="PASS" starttime="20260115 10:09:54.356" endtime="20260115 10:09:54.706"/>
+<msg timestamp="20260115 11:07:25.855" level="INFO">${popup_exists} = False</msg>
+<status status="PASS" starttime="20260115 11:07:25.509" endtime="20260115 11:07:25.855"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${popup_exists}</arg>
 <arg>Click Element</arg>
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:09:54.706" endtime="20260115 10:09:54.707"/>
+<status status="PASS" starttime="20260115 11:07:25.855" endtime="20260115 11:07:25.855"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:09:55.710" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:09:54.707" endtime="20260115 10:09:55.710"/>
+<msg timestamp="20260115 11:07:26.863" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:07:25.856" endtime="20260115 11:07:26.864"/>
 </kw>
-<status status="PASS" starttime="20260115 10:09:54.356" endtime="20260115 10:09:55.710"/>
+<status status="PASS" starttime="20260115 11:07:25.509" endtime="20260115 11:07:26.864"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:09:55.710" endtime="20260115 10:09:55.777"/>
+<status status="PASS" starttime="20260115 11:07:26.864" endtime="20260115 11:07:27.056"/>
 </kw>
-<status status="PASS" starttime="20260115 10:09:52.795" endtime="20260115 10:09:55.777"/>
+<status status="PASS" starttime="20260115 11:07:24.169" endtime="20260115 11:07:27.057"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:09:56.783" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:09:55.782" endtime="20260115 10:09:56.783"/>
+<msg timestamp="20260115 11:07:28.058" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:07:27.057" endtime="20260115 11:07:28.059"/>
 </kw>
 <kw name="Open Menu">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:09:56.786" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260115 10:09:56.785" endtime="20260115 10:09:56.964"/>
+<msg timestamp="20260115 11:07:28.061" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260115 11:07:28.061" endtime="20260115 11:07:28.209"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:09:57.965" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:09:56.964" endtime="20260115 10:09:57.965"/>
+<msg timestamp="20260115 11:07:29.212" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:07:28.209" endtime="20260115 11:07:29.212"/>
 </kw>
-<status status="PASS" starttime="20260115 10:09:56.784" endtime="20260115 10:09:57.966"/>
+<status status="PASS" starttime="20260115 11:07:28.060" endtime="20260115 11:07:29.212"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_WRAP}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:09:57.967" endtime="20260115 10:09:58.057"/>
+<status status="PASS" starttime="20260115 11:07:29.214" endtime="20260115 11:07:29.311"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260115 10:09:58.059" endtime="20260115 10:10:00.474"/>
+<status status="PASS" starttime="20260115 11:07:29.312" endtime="20260115 11:07:32.003"/>
 </kw>
-<status status="PASS" starttime="20260115 10:09:50.016" endtime="20260115 10:10:00.474"/>
+<status status="PASS" starttime="20260115 11:07:18.318" endtime="20260115 11:07:32.004"/>
 </test>
 <test id="s1-t2" name="Test Verify Menu Options" line="31">
 <kw name="Setup Test" type="SETUP">
@@ -159,14 +159,14 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260115 10:10:00.477" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20260115 10:10:00.476" endtime="20260115 10:10:03.149"/>
+<msg timestamp="20260115 11:07:32.008" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260115 11:07:32.008" endtime="20260115 11:07:34.971"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260115 10:10:03.149" endtime="20260115 10:10:03.279"/>
+<status status="PASS" starttime="20260115 11:07:34.971" endtime="20260115 11:07:35.104"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:00.476" endtime="20260115 10:10:03.279"/>
+<status status="PASS" starttime="20260115 11:07:32.007" endtime="20260115 11:07:35.104"/>
 </kw>
 <kw name="Load Test Data">
 <arg>test_verify_options</arg>
@@ -174,25 +174,25 @@
 <var>${json}</var>
 <arg>${JSON_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20260115 10:10:03.287" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
-<status status="PASS" starttime="20260115 10:10:03.285" endtime="20260115 10:10:03.288"/>
+<msg timestamp="20260115 11:07:35.112" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
+<status status="PASS" starttime="20260115 11:07:35.109" endtime="20260115 11:07:35.112"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${test}</var>
 <arg>${json}</arg>
 <arg>${test_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:03.289" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'VÃ©rifier les options du menu'}</msg>
-<status status="PASS" starttime="20260115 10:10:03.288" endtime="20260115 10:10:03.289"/>
+<msg timestamp="20260115 11:07:35.122" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'VÃ©rifier les options du menu'}</msg>
+<status status="PASS" starttime="20260115 11:07:35.112" endtime="20260115 11:07:35.122"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${TEST_DATA}</arg>
 <arg>${test}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20260115 10:10:03.301" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'VÃ©rifier les options du menu'}</msg>
-<status status="PASS" starttime="20260115 10:10:03.300" endtime="20260115 10:10:03.301"/>
+<msg timestamp="20260115 11:07:35.225" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'VÃ©rifier les options du menu'}</msg>
+<status status="PASS" starttime="20260115 11:07:35.218" endtime="20260115 11:07:35.226"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:03.285" endtime="20260115 10:10:03.301"/>
+<status status="PASS" starttime="20260115 11:07:35.109" endtime="20260115 11:07:35.226"/>
 </kw>
 <kw name="Login">
 <kw name="Get From Dictionary" library="Collections">
@@ -200,38 +200,38 @@
 <arg>${TEST_DATA}</arg>
 <arg>username</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:03.452" level="INFO">${username} = standard_user</msg>
-<status status="PASS" starttime="20260115 10:10:03.452" endtime="20260115 10:10:03.459"/>
+<msg timestamp="20260115 11:07:35.336" level="INFO">${username} = standard_user</msg>
+<status status="PASS" starttime="20260115 11:07:35.336" endtime="20260115 11:07:35.336"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${password}</var>
 <arg>${TEST_DATA}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:03.465" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20260115 10:10:03.460" endtime="20260115 10:10:03.465"/>
+<msg timestamp="20260115 11:07:35.350" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20260115 11:07:35.337" endtime="20260115 11:07:35.351"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:03.467" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20260115 10:10:03.466" endtime="20260115 10:10:04.324"/>
+<msg timestamp="20260115 11:07:35.352" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260115 11:07:35.351" endtime="20260115 11:07:36.460"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:04.326" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20260115 10:10:04.425" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20260115 10:10:04.610" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20260115 10:10:04.325" endtime="20260115 10:10:04.610"/>
+<msg timestamp="20260115 11:07:36.461" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260115 11:07:36.615" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260115 11:07:36.765" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260115 11:07:36.460" endtime="20260115 11:07:36.766"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:04.611" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20260115 10:10:04.610" endtime="20260115 10:10:04.890"/>
+<msg timestamp="20260115 11:07:36.766" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260115 11:07:36.766" endtime="20260115 11:07:37.009"/>
 </kw>
 <kw name="Handle Password Popup">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -242,92 +242,92 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:10:05.212" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-18.png"&gt;&lt;img src="selenium-screenshot-18.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260115 10:10:05.213" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
-<status status="FAIL" starttime="20260115 10:10:04.891" endtime="20260115 10:10:05.216"/>
+<msg timestamp="20260115 11:07:37.327" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260115 11:07:37.328" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
+<status status="FAIL" starttime="20260115 11:07:37.010" endtime="20260115 11:07:37.330"/>
 </kw>
-<msg timestamp="20260115 10:10:05.216" level="INFO">${popup_exists} = False</msg>
-<status status="PASS" starttime="20260115 10:10:04.891" endtime="20260115 10:10:05.216"/>
+<msg timestamp="20260115 11:07:37.331" level="INFO">${popup_exists} = False</msg>
+<status status="PASS" starttime="20260115 11:07:37.009" endtime="20260115 11:07:37.331"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${popup_exists}</arg>
 <arg>Click Element</arg>
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:10:05.216" endtime="20260115 10:10:05.216"/>
+<status status="PASS" starttime="20260115 11:07:37.331" endtime="20260115 11:07:37.331"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:06.220" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:05.217" endtime="20260115 10:10:06.221"/>
+<msg timestamp="20260115 11:07:38.337" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:07:37.332" endtime="20260115 11:07:38.337"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:04.890" endtime="20260115 10:10:06.224"/>
+<status status="PASS" starttime="20260115 11:07:37.009" endtime="20260115 11:07:38.337"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:10:06.228" endtime="20260115 10:10:06.336"/>
+<status status="PASS" starttime="20260115 11:07:38.338" endtime="20260115 11:07:38.425"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:03.449" endtime="20260115 10:10:06.337"/>
+<status status="PASS" starttime="20260115 11:07:35.335" endtime="20260115 11:07:38.425"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:07.339" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:06.338" endtime="20260115 10:10:07.340"/>
+<msg timestamp="20260115 11:07:39.427" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:07:38.426" endtime="20260115 11:07:39.427"/>
 </kw>
 <kw name="Open Menu">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:07.343" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260115 10:10:07.342" endtime="20260115 10:10:07.511"/>
+<msg timestamp="20260115 11:07:39.429" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260115 11:07:39.429" endtime="20260115 11:07:39.565"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:08.512" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:07.511" endtime="20260115 10:10:08.512"/>
+<msg timestamp="20260115 11:07:40.566" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:07:39.565" endtime="20260115 11:07:40.567"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:07.342" endtime="20260115 10:10:08.513"/>
+<status status="PASS" starttime="20260115 11:07:39.429" endtime="20260115 11:07:40.567"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_WRAP}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:10:08.514" endtime="20260115 10:10:08.583"/>
+<status status="PASS" starttime="20260115 11:07:40.568" endtime="20260115 11:07:40.623"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${ALL_ITEMS}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:10:08.638" level="INFO">Element 'id=inventory_sidebar_link' is displayed.</msg>
-<status status="PASS" starttime="20260115 10:10:08.584" endtime="20260115 10:10:08.638"/>
+<msg timestamp="20260115 11:07:40.652" level="INFO">Element 'id=inventory_sidebar_link' is displayed.</msg>
+<status status="PASS" starttime="20260115 11:07:40.624" endtime="20260115 11:07:40.653"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${ABOUT}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:10:08.668" level="INFO">Element 'id=about_sidebar_link' is displayed.</msg>
-<status status="PASS" starttime="20260115 10:10:08.638" endtime="20260115 10:10:08.668"/>
+<msg timestamp="20260115 11:07:40.706" level="INFO">Element 'id=about_sidebar_link' is displayed.</msg>
+<status status="PASS" starttime="20260115 11:07:40.654" endtime="20260115 11:07:40.707"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${LOGOUT}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:10:08.698" level="INFO">Element 'id=logout_sidebar_link' is displayed.</msg>
-<status status="PASS" starttime="20260115 10:10:08.670" endtime="20260115 10:10:08.698"/>
+<msg timestamp="20260115 11:07:40.731" level="INFO">Element 'id=logout_sidebar_link' is displayed.</msg>
+<status status="PASS" starttime="20260115 11:07:40.707" endtime="20260115 11:07:40.731"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${RESET_APP}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:10:08.739" level="INFO">Element 'id=reset_sidebar_link' is displayed.</msg>
-<status status="PASS" starttime="20260115 10:10:08.699" endtime="20260115 10:10:08.740"/>
+<msg timestamp="20260115 11:07:40.793" level="INFO">Element 'id=reset_sidebar_link' is displayed.</msg>
+<status status="PASS" starttime="20260115 11:07:40.732" endtime="20260115 11:07:40.793"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260115 10:10:08.741" endtime="20260115 10:10:11.382"/>
+<status status="PASS" starttime="20260115 11:07:40.794" endtime="20260115 11:07:43.215"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:00.475" endtime="20260115 10:10:11.383"/>
+<status status="PASS" starttime="20260115 11:07:32.006" endtime="20260115 11:07:43.217"/>
 </test>
 <test id="s1-t3" name="Test Click All Items" line="42">
 <kw name="Setup Test" type="SETUP">
@@ -335,14 +335,14 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260115 10:10:11.388" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20260115 10:10:11.387" endtime="20260115 10:10:14.187"/>
+<msg timestamp="20260115 11:07:43.219" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260115 11:07:43.219" endtime="20260115 11:07:45.894"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260115 10:10:14.187" endtime="20260115 10:10:14.253"/>
+<status status="PASS" starttime="20260115 11:07:45.894" endtime="20260115 11:07:45.933"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:11.387" endtime="20260115 10:10:14.253"/>
+<status status="PASS" starttime="20260115 11:07:43.218" endtime="20260115 11:07:45.933"/>
 </kw>
 <kw name="Load Test Data">
 <arg>test_click_all_items</arg>
@@ -350,25 +350,25 @@
 <var>${json}</var>
 <arg>${JSON_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20260115 10:10:14.261" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
-<status status="PASS" starttime="20260115 10:10:14.260" endtime="20260115 10:10:14.262"/>
+<msg timestamp="20260115 11:07:45.940" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
+<status status="PASS" starttime="20260115 11:07:45.938" endtime="20260115 11:07:45.940"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${test}</var>
 <arg>${json}</arg>
 <arg>${test_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:14.262" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Cliquer sur All Items depuis le menu'}</msg>
-<status status="PASS" starttime="20260115 10:10:14.262" endtime="20260115 10:10:14.262"/>
+<msg timestamp="20260115 11:07:45.940" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Cliquer sur All Items depuis le menu'}</msg>
+<status status="PASS" starttime="20260115 11:07:45.940" endtime="20260115 11:07:45.940"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${TEST_DATA}</arg>
 <arg>${test}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20260115 10:10:14.267" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Cliquer sur All Items depuis le menu'}</msg>
-<status status="PASS" starttime="20260115 10:10:14.262" endtime="20260115 10:10:14.267"/>
+<msg timestamp="20260115 11:07:45.945" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Cliquer sur All Items depuis le menu'}</msg>
+<status status="PASS" starttime="20260115 11:07:45.940" endtime="20260115 11:07:45.945"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:14.259" endtime="20260115 10:10:14.267"/>
+<status status="PASS" starttime="20260115 11:07:45.938" endtime="20260115 11:07:45.945"/>
 </kw>
 <kw name="Login">
 <kw name="Get From Dictionary" library="Collections">
@@ -376,38 +376,38 @@
 <arg>${TEST_DATA}</arg>
 <arg>username</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:14.336" level="INFO">${username} = standard_user</msg>
-<status status="PASS" starttime="20260115 10:10:14.335" endtime="20260115 10:10:14.336"/>
+<msg timestamp="20260115 11:07:45.996" level="INFO">${username} = standard_user</msg>
+<status status="PASS" starttime="20260115 11:07:45.996" endtime="20260115 11:07:45.996"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${password}</var>
 <arg>${TEST_DATA}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:14.337" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20260115 10:10:14.336" endtime="20260115 10:10:14.337"/>
+<msg timestamp="20260115 11:07:45.997" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20260115 11:07:45.997" endtime="20260115 11:07:46.003"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:14.338" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20260115 10:10:14.337" endtime="20260115 10:10:14.951"/>
+<msg timestamp="20260115 11:07:46.004" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260115 11:07:46.003" endtime="20260115 11:07:46.442"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:14.952" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20260115 10:10:15.198" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20260115 10:10:15.463" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20260115 10:10:14.952" endtime="20260115 10:10:15.463"/>
+<msg timestamp="20260115 11:07:46.442" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260115 11:07:46.573" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260115 11:07:46.697" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260115 11:07:46.442" endtime="20260115 11:07:46.697"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:15.463" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20260115 10:10:15.463" endtime="20260115 10:10:15.948"/>
+<msg timestamp="20260115 11:07:46.698" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260115 11:07:46.698" endtime="20260115 11:07:47.466"/>
 </kw>
 <kw name="Handle Password Popup">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -418,86 +418,86 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:10:16.295" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-19.png"&gt;&lt;img src="selenium-screenshot-19.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260115 10:10:16.296" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
-<status status="FAIL" starttime="20260115 10:10:15.949" endtime="20260115 10:10:16.299"/>
+<msg timestamp="20260115 11:07:47.783" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260115 11:07:47.784" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
+<status status="FAIL" starttime="20260115 11:07:47.467" endtime="20260115 11:07:47.787"/>
 </kw>
-<msg timestamp="20260115 10:10:16.299" level="INFO">${popup_exists} = False</msg>
-<status status="PASS" starttime="20260115 10:10:15.949" endtime="20260115 10:10:16.299"/>
+<msg timestamp="20260115 11:07:47.787" level="INFO">${popup_exists} = False</msg>
+<status status="PASS" starttime="20260115 11:07:47.466" endtime="20260115 11:07:47.787"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${popup_exists}</arg>
 <arg>Click Element</arg>
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:10:16.299" endtime="20260115 10:10:16.301"/>
+<status status="PASS" starttime="20260115 11:07:47.787" endtime="20260115 11:07:47.788"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:17.306" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:16.302" endtime="20260115 10:10:17.307"/>
+<msg timestamp="20260115 11:07:48.790" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:07:47.788" endtime="20260115 11:07:48.790"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:15.948" endtime="20260115 10:10:17.307"/>
+<status status="PASS" starttime="20260115 11:07:47.466" endtime="20260115 11:07:48.791"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:10:17.307" endtime="20260115 10:10:17.426"/>
+<status status="PASS" starttime="20260115 11:07:48.791" endtime="20260115 11:07:48.861"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:14.335" endtime="20260115 10:10:17.426"/>
+<status status="PASS" starttime="20260115 11:07:45.995" endtime="20260115 11:07:48.862"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:18.431" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:17.430" endtime="20260115 10:10:18.432"/>
+<msg timestamp="20260115 11:07:49.865" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:07:48.864" endtime="20260115 11:07:49.865"/>
 </kw>
 <kw name="Open Menu">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:18.434" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260115 10:10:18.434" endtime="20260115 10:10:18.597"/>
+<msg timestamp="20260115 11:07:49.867" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260115 11:07:49.867" endtime="20260115 11:07:49.982"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:19.598" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:18.597" endtime="20260115 10:10:19.599"/>
+<msg timestamp="20260115 11:07:50.984" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:07:49.983" endtime="20260115 11:07:50.984"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:18.433" endtime="20260115 10:10:19.599"/>
+<status status="PASS" starttime="20260115 11:07:49.866" endtime="20260115 11:07:50.984"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_WRAP}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:10:19.601" endtime="20260115 10:10:19.686"/>
+<status status="PASS" starttime="20260115 11:07:50.986" endtime="20260115 11:07:51.055"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${ALL_ITEMS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:19.687" level="INFO">Clicking element 'id=inventory_sidebar_link'.</msg>
-<status status="PASS" starttime="20260115 10:10:19.687" endtime="20260115 10:10:19.822"/>
+<msg timestamp="20260115 11:07:51.056" level="INFO">Clicking element 'id=inventory_sidebar_link'.</msg>
+<status status="PASS" starttime="20260115 11:07:51.056" endtime="20260115 11:07:51.189"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:21.825" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260115 10:10:19.823" endtime="20260115 10:10:21.825"/>
+<msg timestamp="20260115 11:07:53.194" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260115 11:07:51.192" endtime="20260115 11:07:53.194"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>id=inventory_container</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:10:21.827" endtime="20260115 10:10:21.897"/>
+<status status="PASS" starttime="20260115 11:07:53.201" endtime="20260115 11:07:53.270"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260115 10:10:21.898" endtime="20260115 10:10:24.516"/>
+<status status="PASS" starttime="20260115 11:07:53.271" endtime="20260115 11:07:55.683"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:11.386" endtime="20260115 10:10:24.519"/>
+<status status="PASS" starttime="20260115 11:07:43.218" endtime="20260115 11:07:55.686"/>
 </test>
 <test id="s1-t4" name="Test Click About" line="52">
 <kw name="Setup Test" type="SETUP">
@@ -505,14 +505,14 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260115 10:10:24.523" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20260115 10:10:24.522" endtime="20260115 10:10:27.416"/>
+<msg timestamp="20260115 11:07:55.689" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260115 11:07:55.688" endtime="20260115 11:07:58.720"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260115 10:10:27.416" endtime="20260115 10:10:27.476"/>
+<status status="PASS" starttime="20260115 11:07:58.721" endtime="20260115 11:07:58.809"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:24.522" endtime="20260115 10:10:27.476"/>
+<status status="PASS" starttime="20260115 11:07:55.688" endtime="20260115 11:07:58.809"/>
 </kw>
 <kw name="Load Test Data">
 <arg>test_click_about</arg>
@@ -520,25 +520,25 @@
 <var>${json}</var>
 <arg>${JSON_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20260115 10:10:27.491" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
-<status status="PASS" starttime="20260115 10:10:27.486" endtime="20260115 10:10:27.491"/>
+<msg timestamp="20260115 11:07:58.822" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
+<status status="PASS" starttime="20260115 11:07:58.821" endtime="20260115 11:07:58.822"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${test}</var>
 <arg>${json}</arg>
 <arg>${test_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:27.492" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Cliquer sur About'}</msg>
-<status status="PASS" starttime="20260115 10:10:27.491" endtime="20260115 10:10:27.495"/>
+<msg timestamp="20260115 11:07:58.823" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Cliquer sur About'}</msg>
+<status status="PASS" starttime="20260115 11:07:58.822" endtime="20260115 11:07:58.823"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${TEST_DATA}</arg>
 <arg>${test}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20260115 10:10:27.496" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Cliquer sur About'}</msg>
-<status status="PASS" starttime="20260115 10:10:27.495" endtime="20260115 10:10:27.496"/>
+<msg timestamp="20260115 11:07:58.885" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Cliquer sur About'}</msg>
+<status status="PASS" starttime="20260115 11:07:58.823" endtime="20260115 11:07:58.885"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:27.485" endtime="20260115 10:10:27.496"/>
+<status status="PASS" starttime="20260115 11:07:58.820" endtime="20260115 11:07:58.885"/>
 </kw>
 <kw name="Login">
 <kw name="Get From Dictionary" library="Collections">
@@ -546,38 +546,38 @@
 <arg>${TEST_DATA}</arg>
 <arg>username</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:27.544" level="INFO">${username} = standard_user</msg>
-<status status="PASS" starttime="20260115 10:10:27.543" endtime="20260115 10:10:27.544"/>
+<msg timestamp="20260115 11:07:58.888" level="INFO">${username} = standard_user</msg>
+<status status="PASS" starttime="20260115 11:07:58.888" endtime="20260115 11:07:58.888"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${password}</var>
 <arg>${TEST_DATA}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:27.546" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20260115 10:10:27.545" endtime="20260115 10:10:27.546"/>
+<msg timestamp="20260115 11:07:58.889" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20260115 11:07:58.888" endtime="20260115 11:07:58.889"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:27.547" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20260115 10:10:27.546" endtime="20260115 10:10:28.615"/>
+<msg timestamp="20260115 11:07:58.890" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260115 11:07:58.889" endtime="20260115 11:07:59.322"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:28.615" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20260115 10:10:28.739" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20260115 10:10:28.943" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20260115 10:10:28.615" endtime="20260115 10:10:28.943"/>
+<msg timestamp="20260115 11:07:59.323" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260115 11:08:00.188" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260115 11:08:00.867" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260115 11:07:59.322" endtime="20260115 11:08:00.867"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:28.943" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20260115 10:10:28.943" endtime="20260115 10:10:29.216"/>
+<msg timestamp="20260115 11:08:00.868" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260115 11:08:00.867" endtime="20260115 11:08:01.230"/>
 </kw>
 <kw name="Handle Password Popup">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -588,88 +588,88 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:10:29.549" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-20.png"&gt;&lt;img src="selenium-screenshot-20.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260115 10:10:29.550" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
-<status status="FAIL" starttime="20260115 10:10:29.217" endtime="20260115 10:10:29.555"/>
+<msg timestamp="20260115 11:08:01.524" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260115 11:08:01.525" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
+<status status="FAIL" starttime="20260115 11:08:01.232" endtime="20260115 11:08:01.528"/>
 </kw>
-<msg timestamp="20260115 10:10:29.555" level="INFO">${popup_exists} = False</msg>
-<status status="PASS" starttime="20260115 10:10:29.217" endtime="20260115 10:10:29.555"/>
+<msg timestamp="20260115 11:08:01.528" level="INFO">${popup_exists} = False</msg>
+<status status="PASS" starttime="20260115 11:08:01.232" endtime="20260115 11:08:01.528"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${popup_exists}</arg>
 <arg>Click Element</arg>
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:10:29.555" endtime="20260115 10:10:29.556"/>
+<status status="PASS" starttime="20260115 11:08:01.529" endtime="20260115 11:08:01.529"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:30.589" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:29.556" endtime="20260115 10:10:30.589"/>
+<msg timestamp="20260115 11:08:02.532" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:01.529" endtime="20260115 11:08:02.532"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:29.216" endtime="20260115 10:10:30.594"/>
+<status status="PASS" starttime="20260115 11:08:01.231" endtime="20260115 11:08:02.533"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:10:30.595" endtime="20260115 10:10:30.870"/>
+<status status="PASS" starttime="20260115 11:08:02.533" endtime="20260115 11:08:02.626"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:27.540" endtime="20260115 10:10:30.870"/>
+<status status="PASS" starttime="20260115 11:07:58.886" endtime="20260115 11:08:02.626"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:31.886" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:30.885" endtime="20260115 10:10:31.886"/>
+<msg timestamp="20260115 11:08:03.627" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:02.627" endtime="20260115 11:08:03.628"/>
 </kw>
 <kw name="Open Menu">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:31.889" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260115 10:10:31.889" endtime="20260115 10:10:32.102"/>
+<msg timestamp="20260115 11:08:03.655" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260115 11:08:03.655" endtime="20260115 11:08:03.798"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:33.107" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:32.103" endtime="20260115 10:10:33.107"/>
+<msg timestamp="20260115 11:08:04.805" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:03.800" endtime="20260115 11:08:04.805"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:31.888" endtime="20260115 10:10:33.107"/>
+<status status="PASS" starttime="20260115 11:08:03.650" endtime="20260115 11:08:04.805"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_WRAP}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:10:33.177" endtime="20260115 10:10:33.284"/>
+<status status="PASS" starttime="20260115 11:08:04.808" endtime="20260115 11:08:04.865"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${ABOUT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:33.287" level="INFO">Clicking element 'id=about_sidebar_link'.</msg>
-<status status="PASS" starttime="20260115 10:10:33.287" endtime="20260115 10:10:36.494"/>
+<msg timestamp="20260115 11:08:04.868" level="INFO">Clicking element 'id=about_sidebar_link'.</msg>
+<status status="PASS" starttime="20260115 11:08:04.868" endtime="20260115 11:08:08.222"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:39.514" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20260115 10:10:36.512" endtime="20260115 10:10:39.514"/>
+<msg timestamp="20260115 11:08:11.238" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20260115 11:08:08.231" endtime="20260115 11:08:11.238"/>
 </kw>
 <kw name="Switch To About Window">
 <kw name="Get Window Handles" library="SeleniumLibrary">
 <var>${windows}</var>
 <doc>Returns all child window handles of the selected browser as a list.</doc>
-<msg timestamp="20260115 10:10:39.520" level="INFO">${windows} = ['2F5E1F5A80FB259EAE629351B3A981B9']</msg>
-<status status="PASS" starttime="20260115 10:10:39.516" endtime="20260115 10:10:39.520"/>
+<msg timestamp="20260115 11:08:11.312" level="INFO">${windows} = ['003EB449D9D7A9E41197EFC0CECC2ED0']</msg>
+<status status="PASS" starttime="20260115 11:08:11.292" endtime="20260115 11:08:11.312"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${windows.__len__()} == 2</arg>
 <arg>Switch Window</arg>
 <arg>NEW</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:10:39.520" endtime="20260115 10:10:39.522"/>
+<status status="PASS" starttime="20260115 11:08:11.313" endtime="20260115 11:08:11.314"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${windows.__len__()} == 2</arg>
@@ -677,28 +677,28 @@
 <arg>Sauce Labs</arg>
 <arg>timeout=15s</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:10:39.522" endtime="20260115 10:10:39.525"/>
+<status status="PASS" starttime="20260115 11:08:11.314" endtime="20260115 11:08:11.319"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${windows.__len__()} == 2</arg>
 <arg>Close Window</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:10:39.525" endtime="20260115 10:10:39.526"/>
+<status status="PASS" starttime="20260115 11:08:11.319" endtime="20260115 11:08:11.327"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${windows.__len__()} == 2</arg>
 <arg>Switch Window</arg>
 <arg>MAIN</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:10:39.526" endtime="20260115 10:10:39.528"/>
+<status status="PASS" starttime="20260115 11:08:11.327" endtime="20260115 11:08:11.333"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:39.516" endtime="20260115 10:10:39.528"/>
+<status status="PASS" starttime="20260115 11:08:11.289" endtime="20260115 11:08:11.333"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260115 10:10:39.529" endtime="20260115 10:10:41.942"/>
+<status status="PASS" starttime="20260115 11:08:11.378" endtime="20260115 11:08:13.838"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:24.521" endtime="20260115 10:10:41.946"/>
+<status status="PASS" starttime="20260115 11:07:55.687" endtime="20260115 11:08:13.839"/>
 </test>
 <test id="s1-t5" name="Test Reset App" line="62">
 <kw name="Setup Test" type="SETUP">
@@ -706,14 +706,14 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260115 10:10:41.961" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20260115 10:10:41.960" endtime="20260115 10:10:44.904"/>
+<msg timestamp="20260115 11:08:13.841" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260115 11:08:13.841" endtime="20260115 11:08:16.519"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260115 10:10:44.904" endtime="20260115 10:10:44.970"/>
+<status status="PASS" starttime="20260115 11:08:16.519" endtime="20260115 11:08:16.612"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:41.960" endtime="20260115 10:10:44.971"/>
+<status status="PASS" starttime="20260115 11:08:13.841" endtime="20260115 11:08:16.612"/>
 </kw>
 <kw name="Load Test Data">
 <arg>test_reset_app</arg>
@@ -721,25 +721,25 @@
 <var>${json}</var>
 <arg>${JSON_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20260115 10:10:44.984" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
-<status status="PASS" starttime="20260115 10:10:44.982" endtime="20260115 10:10:44.984"/>
+<msg timestamp="20260115 11:08:16.621" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
+<status status="PASS" starttime="20260115 11:08:16.619" endtime="20260115 11:08:16.621"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${test}</var>
 <arg>${json}</arg>
 <arg>${test_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:44.985" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': "RÃ©initialiser l'Ã©tat de l'app"}</msg>
-<status status="PASS" starttime="20260115 10:10:44.984" endtime="20260115 10:10:44.985"/>
+<msg timestamp="20260115 11:08:16.622" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': "RÃ©initialiser l'Ã©tat de l'app"}</msg>
+<status status="PASS" starttime="20260115 11:08:16.621" endtime="20260115 11:08:16.622"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${TEST_DATA}</arg>
 <arg>${test}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20260115 10:10:45.060" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': "RÃ©initialiser l'Ã©tat de l'app"}</msg>
-<status status="PASS" starttime="20260115 10:10:44.985" endtime="20260115 10:10:45.060"/>
+<msg timestamp="20260115 11:08:16.624" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': "RÃ©initialiser l'Ã©tat de l'app"}</msg>
+<status status="PASS" starttime="20260115 11:08:16.622" endtime="20260115 11:08:16.624"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:44.982" endtime="20260115 10:10:45.061"/>
+<status status="PASS" starttime="20260115 11:08:16.618" endtime="20260115 11:08:16.626"/>
 </kw>
 <kw name="Login">
 <kw name="Get From Dictionary" library="Collections">
@@ -747,38 +747,38 @@
 <arg>${TEST_DATA}</arg>
 <arg>username</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:45.065" level="INFO">${username} = standard_user</msg>
-<status status="PASS" starttime="20260115 10:10:45.065" endtime="20260115 10:10:45.065"/>
+<msg timestamp="20260115 11:08:16.641" level="INFO">${username} = standard_user</msg>
+<status status="PASS" starttime="20260115 11:08:16.641" endtime="20260115 11:08:16.642"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${password}</var>
 <arg>${TEST_DATA}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:45.066" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20260115 10:10:45.066" endtime="20260115 10:10:45.066"/>
+<msg timestamp="20260115 11:08:16.642" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20260115 11:08:16.642" endtime="20260115 11:08:16.643"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:45.067" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20260115 10:10:45.066" endtime="20260115 10:10:45.854"/>
+<msg timestamp="20260115 11:08:16.643" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260115 11:08:16.643" endtime="20260115 11:08:17.149"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:45.855" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20260115 10:10:46.038" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20260115 10:10:46.165" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20260115 10:10:45.854" endtime="20260115 10:10:46.165"/>
+<msg timestamp="20260115 11:08:17.150" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260115 11:08:17.291" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260115 11:08:17.422" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260115 11:08:17.149" endtime="20260115 11:08:17.422"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:46.165" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20260115 10:10:46.165" endtime="20260115 10:10:46.933"/>
+<msg timestamp="20260115 11:08:17.423" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260115 11:08:17.423" endtime="20260115 11:08:17.803"/>
 </kw>
 <kw name="Handle Password Popup">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -789,80 +789,80 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:10:47.265" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-21.png"&gt;&lt;img src="selenium-screenshot-21.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260115 10:10:47.265" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
-<status status="FAIL" starttime="20260115 10:10:46.935" endtime="20260115 10:10:47.269"/>
+<msg timestamp="20260115 11:08:18.174" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260115 11:08:18.174" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
+<status status="FAIL" starttime="20260115 11:08:17.804" endtime="20260115 11:08:18.177"/>
 </kw>
-<msg timestamp="20260115 10:10:47.269" level="INFO">${popup_exists} = False</msg>
-<status status="PASS" starttime="20260115 10:10:46.934" endtime="20260115 10:10:47.269"/>
+<msg timestamp="20260115 11:08:18.177" level="INFO">${popup_exists} = False</msg>
+<status status="PASS" starttime="20260115 11:08:17.804" endtime="20260115 11:08:18.177"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${popup_exists}</arg>
 <arg>Click Element</arg>
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:10:47.269" endtime="20260115 10:10:47.269"/>
+<status status="PASS" starttime="20260115 11:08:18.177" endtime="20260115 11:08:18.178"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:48.271" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:47.270" endtime="20260115 10:10:48.271"/>
+<msg timestamp="20260115 11:08:19.185" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:18.178" endtime="20260115 11:08:19.185"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:46.934" endtime="20260115 10:10:48.271"/>
+<status status="PASS" starttime="20260115 11:08:17.803" endtime="20260115 11:08:19.186"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:10:48.274" endtime="20260115 10:10:48.374"/>
+<status status="PASS" starttime="20260115 11:08:19.186" endtime="20260115 11:08:19.254"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:45.064" endtime="20260115 10:10:48.374"/>
+<status status="PASS" starttime="20260115 11:08:16.640" endtime="20260115 11:08:19.255"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:49.380" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:48.379" endtime="20260115 10:10:49.380"/>
+<msg timestamp="20260115 11:08:20.260" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:19.256" endtime="20260115 11:08:20.261"/>
 </kw>
 <kw name="Open Menu">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:49.382" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260115 10:10:49.382" endtime="20260115 10:10:49.520"/>
+<msg timestamp="20260115 11:08:20.266" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260115 11:08:20.266" endtime="20260115 11:08:20.509"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:50.524" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:49.520" endtime="20260115 10:10:50.524"/>
+<msg timestamp="20260115 11:08:21.511" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:20.510" endtime="20260115 11:08:21.511"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:49.381" endtime="20260115 10:10:50.524"/>
+<status status="PASS" starttime="20260115 11:08:20.264" endtime="20260115 11:08:21.512"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_WRAP}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:10:50.526" endtime="20260115 10:10:50.702"/>
+<status status="PASS" starttime="20260115 11:08:21.512" endtime="20260115 11:08:21.560"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${RESET_APP}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:50.704" level="INFO">Clicking element 'id=reset_sidebar_link'.</msg>
-<status status="PASS" starttime="20260115 10:10:50.703" endtime="20260115 10:10:50.841"/>
+<msg timestamp="20260115 11:08:21.561" level="INFO">Clicking element 'id=reset_sidebar_link'.</msg>
+<status status="PASS" starttime="20260115 11:08:21.561" endtime="20260115 11:08:21.779"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:10:52.852" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260115 10:10:50.851" endtime="20260115 10:10:52.852"/>
+<msg timestamp="20260115 11:08:23.783" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260115 11:08:21.781" endtime="20260115 11:08:23.783"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260115 10:10:52.855" endtime="20260115 10:10:55.336"/>
+<status status="PASS" starttime="20260115 11:08:23.785" endtime="20260115 11:08:26.379"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:41.954" endtime="20260115 10:10:55.337"/>
+<status status="PASS" starttime="20260115 11:08:13.840" endtime="20260115 11:08:26.380"/>
 </test>
 <test id="s1-t6" name="Test Logout" line="71">
 <kw name="Setup Test" type="SETUP">
@@ -870,14 +870,14 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260115 10:10:55.339" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20260115 10:10:55.338" endtime="20260115 10:10:57.750"/>
+<msg timestamp="20260115 11:08:26.383" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260115 11:08:26.383" endtime="20260115 11:08:28.838"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260115 10:10:57.750" endtime="20260115 10:10:57.819"/>
+<status status="PASS" starttime="20260115 11:08:28.838" endtime="20260115 11:08:28.908"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:55.338" endtime="20260115 10:10:57.819"/>
+<status status="PASS" starttime="20260115 11:08:26.382" endtime="20260115 11:08:28.908"/>
 </kw>
 <kw name="Load Test Data">
 <arg>test_logout</arg>
@@ -885,25 +885,25 @@
 <var>${json}</var>
 <arg>${JSON_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20260115 10:10:57.881" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
-<status status="PASS" starttime="20260115 10:10:57.828" endtime="20260115 10:10:57.882"/>
+<msg timestamp="20260115 11:08:28.917" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
+<status status="PASS" starttime="20260115 11:08:28.915" endtime="20260115 11:08:28.917"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${test}</var>
 <arg>${json}</arg>
 <arg>${test_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:57.882" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Se dÃ©connecter via le menu'}</msg>
-<status status="PASS" starttime="20260115 10:10:57.882" endtime="20260115 10:10:57.882"/>
+<msg timestamp="20260115 11:08:28.925" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Se dÃ©connecter via le menu'}</msg>
+<status status="PASS" starttime="20260115 11:08:28.917" endtime="20260115 11:08:28.925"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${TEST_DATA}</arg>
 <arg>${test}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20260115 10:10:57.883" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Se dÃ©connecter via le menu'}</msg>
-<status status="PASS" starttime="20260115 10:10:57.883" endtime="20260115 10:10:57.883"/>
+<msg timestamp="20260115 11:08:28.925" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Se dÃ©connecter via le menu'}</msg>
+<status status="PASS" starttime="20260115 11:08:28.925" endtime="20260115 11:08:28.926"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:57.827" endtime="20260115 10:10:57.883"/>
+<status status="PASS" starttime="20260115 11:08:28.914" endtime="20260115 11:08:28.926"/>
 </kw>
 <kw name="Login">
 <kw name="Get From Dictionary" library="Collections">
@@ -911,38 +911,38 @@
 <arg>${TEST_DATA}</arg>
 <arg>username</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:58.136" level="INFO">${username} = standard_user</msg>
-<status status="PASS" starttime="20260115 10:10:58.136" endtime="20260115 10:10:58.136"/>
+<msg timestamp="20260115 11:08:28.960" level="INFO">${username} = standard_user</msg>
+<status status="PASS" starttime="20260115 11:08:28.959" endtime="20260115 11:08:28.960"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${password}</var>
 <arg>${TEST_DATA}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:10:58.137" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20260115 10:10:58.136" endtime="20260115 10:10:58.137"/>
+<msg timestamp="20260115 11:08:28.961" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20260115 11:08:28.961" endtime="20260115 11:08:28.961"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:58.141" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20260115 10:10:58.137" endtime="20260115 10:10:58.371"/>
+<msg timestamp="20260115 11:08:28.962" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260115 11:08:28.961" endtime="20260115 11:08:29.390"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:58.371" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20260115 10:10:58.522" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20260115 10:10:58.662" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20260115 10:10:58.371" endtime="20260115 10:10:58.662"/>
+<msg timestamp="20260115 11:08:29.391" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260115 11:08:29.572" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260115 11:08:29.729" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260115 11:08:29.390" endtime="20260115 11:08:29.729"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260115 10:10:58.662" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20260115 10:10:58.662" endtime="20260115 10:10:59.251"/>
+<msg timestamp="20260115 11:08:29.730" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260115 11:08:29.730" endtime="20260115 11:08:30.002"/>
 </kw>
 <kw name="Handle Password Popup">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -953,86 +953,86 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:10:59.620" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-22.png"&gt;&lt;img src="selenium-screenshot-22.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260115 10:10:59.621" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
-<status status="FAIL" starttime="20260115 10:10:59.252" endtime="20260115 10:10:59.624"/>
+<msg timestamp="20260115 11:08:30.353" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-6.png"&gt;&lt;img src="selenium-screenshot-6.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260115 11:08:30.354" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
+<status status="FAIL" starttime="20260115 11:08:30.003" endtime="20260115 11:08:30.357"/>
 </kw>
-<msg timestamp="20260115 10:10:59.624" level="INFO">${popup_exists} = False</msg>
-<status status="PASS" starttime="20260115 10:10:59.252" endtime="20260115 10:10:59.624"/>
+<msg timestamp="20260115 11:08:30.357" level="INFO">${popup_exists} = False</msg>
+<status status="PASS" starttime="20260115 11:08:30.002" endtime="20260115 11:08:30.357"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${popup_exists}</arg>
 <arg>Click Element</arg>
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:10:59.624" endtime="20260115 10:10:59.625"/>
+<status status="PASS" starttime="20260115 11:08:30.358" endtime="20260115 11:08:30.358"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:00.626" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:10:59.625" endtime="20260115 10:11:00.627"/>
+<msg timestamp="20260115 11:08:31.359" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:30.359" endtime="20260115 11:08:31.360"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:59.251" endtime="20260115 10:11:00.627"/>
+<status status="PASS" starttime="20260115 11:08:30.002" endtime="20260115 11:08:31.360"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:00.627" endtime="20260115 10:11:00.704"/>
+<status status="PASS" starttime="20260115 11:08:31.360" endtime="20260115 11:08:31.394"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:58.133" endtime="20260115 10:11:00.704"/>
+<status status="PASS" starttime="20260115 11:08:28.958" endtime="20260115 11:08:31.394"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:01.723" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:00.722" endtime="20260115 10:11:01.723"/>
+<msg timestamp="20260115 11:08:32.397" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:31.395" endtime="20260115 11:08:32.398"/>
 </kw>
 <kw name="Open Menu">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:01.726" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260115 10:11:01.726" endtime="20260115 10:11:01.902"/>
+<msg timestamp="20260115 11:08:32.400" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260115 11:08:32.399" endtime="20260115 11:08:32.524"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:02.910" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:01.903" endtime="20260115 10:11:02.910"/>
+<msg timestamp="20260115 11:08:33.524" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:32.524" endtime="20260115 11:08:33.525"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:01.725" endtime="20260115 10:11:02.911"/>
+<status status="PASS" starttime="20260115 11:08:32.398" endtime="20260115 11:08:33.525"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_WRAP}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:02.913" endtime="20260115 10:11:03.065"/>
+<status status="PASS" starttime="20260115 11:08:33.526" endtime="20260115 11:08:33.598"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${LOGOUT}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:03.074" level="INFO">Clicking element 'id=logout_sidebar_link'.</msg>
-<status status="PASS" starttime="20260115 10:11:03.073" endtime="20260115 10:11:03.263"/>
+<msg timestamp="20260115 11:08:33.600" level="INFO">Clicking element 'id=logout_sidebar_link'.</msg>
+<status status="PASS" starttime="20260115 11:08:33.599" endtime="20260115 11:08:33.893"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:05.290" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260115 10:11:03.274" endtime="20260115 10:11:05.291"/>
+<msg timestamp="20260115 11:08:35.894" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260115 11:08:33.894" endtime="20260115 11:08:35.895"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <arg>timeout=20s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:05.301" endtime="20260115 10:11:05.350"/>
+<status status="PASS" starttime="20260115 11:08:35.896" endtime="20260115 11:08:35.954"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260115 10:11:05.352" endtime="20260115 10:11:07.859"/>
+<status status="PASS" starttime="20260115 11:08:35.957" endtime="20260115 11:08:38.516"/>
 </kw>
-<status status="PASS" starttime="20260115 10:10:55.338" endtime="20260115 10:11:07.859"/>
+<status status="PASS" starttime="20260115 11:08:26.382" endtime="20260115 11:08:38.516"/>
 </test>
 <test id="s1-t7" name="Test Navigation All Items From Cart Page" line="81">
 <kw name="Setup Test" type="SETUP">
@@ -1040,14 +1040,14 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260115 10:11:07.863" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20260115 10:11:07.863" endtime="20260115 10:11:10.645"/>
+<msg timestamp="20260115 11:08:38.519" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260115 11:08:38.518" endtime="20260115 11:08:41.112"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260115 10:11:10.645" endtime="20260115 10:11:10.685"/>
+<status status="PASS" starttime="20260115 11:08:41.112" endtime="20260115 11:08:41.184"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:07.862" endtime="20260115 10:11:10.685"/>
+<status status="PASS" starttime="20260115 11:08:38.518" endtime="20260115 11:08:41.184"/>
 </kw>
 <kw name="Load Test Data">
 <arg>test_nav_from_cart</arg>
@@ -1055,25 +1055,25 @@
 <var>${json}</var>
 <arg>${JSON_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20260115 10:11:10.688" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
-<status status="PASS" starttime="20260115 10:11:10.687" endtime="20260115 10:11:10.688"/>
+<msg timestamp="20260115 11:08:41.205" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
+<status status="PASS" starttime="20260115 11:08:41.195" endtime="20260115 11:08:41.205"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${test}</var>
 <arg>${json}</arg>
 <arg>${test_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:10.689" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Navigation All Items depuis la page panier'}</msg>
-<status status="PASS" starttime="20260115 10:11:10.688" endtime="20260115 10:11:10.689"/>
+<msg timestamp="20260115 11:08:41.269" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Navigation All Items depuis la page panier'}</msg>
+<status status="PASS" starttime="20260115 11:08:41.205" endtime="20260115 11:08:41.269"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${TEST_DATA}</arg>
 <arg>${test}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20260115 10:11:10.691" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Navigation All Items depuis la page panier'}</msg>
-<status status="PASS" starttime="20260115 10:11:10.689" endtime="20260115 10:11:10.691"/>
+<msg timestamp="20260115 11:08:41.272" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Navigation All Items depuis la page panier'}</msg>
+<status status="PASS" starttime="20260115 11:08:41.270" endtime="20260115 11:08:41.273"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:10.687" endtime="20260115 10:11:10.691"/>
+<status status="PASS" starttime="20260115 11:08:41.194" endtime="20260115 11:08:41.273"/>
 </kw>
 <kw name="Login">
 <kw name="Get From Dictionary" library="Collections">
@@ -1081,38 +1081,38 @@
 <arg>${TEST_DATA}</arg>
 <arg>username</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:10.705" level="INFO">${username} = standard_user</msg>
-<status status="PASS" starttime="20260115 10:11:10.705" endtime="20260115 10:11:10.706"/>
+<msg timestamp="20260115 11:08:41.275" level="INFO">${username} = standard_user</msg>
+<status status="PASS" starttime="20260115 11:08:41.274" endtime="20260115 11:08:41.275"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${password}</var>
 <arg>${TEST_DATA}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:10.753" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20260115 10:11:10.706" endtime="20260115 10:11:10.753"/>
+<msg timestamp="20260115 11:08:41.275" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20260115 11:08:41.275" endtime="20260115 11:08:41.275"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:10.753" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20260115 10:11:10.753" endtime="20260115 10:11:11.501"/>
+<msg timestamp="20260115 11:08:41.276" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260115 11:08:41.275" endtime="20260115 11:08:41.568"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:11.502" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20260115 10:11:11.645" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20260115 10:11:11.925" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20260115 10:11:11.501" endtime="20260115 10:11:11.925"/>
+<msg timestamp="20260115 11:08:41.569" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260115 11:08:41.619" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260115 11:08:41.867" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260115 11:08:41.568" endtime="20260115 11:08:41.867"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:11.925" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20260115 10:11:11.925" endtime="20260115 10:11:12.495"/>
+<msg timestamp="20260115 11:08:41.868" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260115 11:08:41.868" endtime="20260115 11:08:42.296"/>
 </kw>
 <kw name="Handle Password Popup">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -1123,110 +1123,110 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:11:12.842" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-23.png"&gt;&lt;img src="selenium-screenshot-23.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260115 10:11:12.843" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
-<status status="FAIL" starttime="20260115 10:11:12.496" endtime="20260115 10:11:12.846"/>
+<msg timestamp="20260115 11:08:42.661" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-7.png"&gt;&lt;img src="selenium-screenshot-7.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260115 11:08:42.662" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
+<status status="FAIL" starttime="20260115 11:08:42.297" endtime="20260115 11:08:42.666"/>
 </kw>
-<msg timestamp="20260115 10:11:12.846" level="INFO">${popup_exists} = False</msg>
-<status status="PASS" starttime="20260115 10:11:12.496" endtime="20260115 10:11:12.846"/>
+<msg timestamp="20260115 11:08:42.666" level="INFO">${popup_exists} = False</msg>
+<status status="PASS" starttime="20260115 11:08:42.297" endtime="20260115 11:08:42.666"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${popup_exists}</arg>
 <arg>Click Element</arg>
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:11:12.846" endtime="20260115 10:11:12.847"/>
+<status status="PASS" starttime="20260115 11:08:42.667" endtime="20260115 11:08:42.667"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:13.848" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:12.847" endtime="20260115 10:11:13.849"/>
+<msg timestamp="20260115 11:08:43.668" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:42.667" endtime="20260115 11:08:43.668"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:12.495" endtime="20260115 10:11:13.849"/>
+<status status="PASS" starttime="20260115 11:08:42.296" endtime="20260115 11:08:43.669"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:13.849" endtime="20260115 10:11:14.025"/>
+<status status="PASS" starttime="20260115 11:08:43.669" endtime="20260115 11:08:43.727"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:10.705" endtime="20260115 10:11:14.025"/>
+<status status="PASS" starttime="20260115 11:08:41.274" endtime="20260115 11:08:43.727"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:15.036" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:14.035" endtime="20260115 10:11:15.036"/>
+<msg timestamp="20260115 11:08:44.729" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:43.728" endtime="20260115 11:08:44.729"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${CART_LINK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:15.039" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
-<status status="PASS" starttime="20260115 10:11:15.038" endtime="20260115 10:11:15.265"/>
+<msg timestamp="20260115 11:08:44.731" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
+<status status="PASS" starttime="20260115 11:08:44.730" endtime="20260115 11:08:44.908"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>id=cart_contents_container</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:15.267" endtime="20260115 10:11:15.326"/>
+<status status="PASS" starttime="20260115 11:08:44.910" endtime="20260115 11:08:45.045"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:16.328" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:15.327" endtime="20260115 10:11:16.328"/>
+<msg timestamp="20260115 11:08:46.048" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:45.047" endtime="20260115 11:08:46.048"/>
 </kw>
 <kw name="Open Menu">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:16.330" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260115 10:11:16.329" endtime="20260115 10:11:16.470"/>
+<msg timestamp="20260115 11:08:46.051" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260115 11:08:46.050" endtime="20260115 11:08:46.222"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:17.473" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:16.471" endtime="20260115 10:11:17.474"/>
+<msg timestamp="20260115 11:08:47.223" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:46.222" endtime="20260115 11:08:47.223"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:16.328" endtime="20260115 10:11:17.474"/>
+<status status="PASS" starttime="20260115 11:08:46.049" endtime="20260115 11:08:47.224"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_WRAP}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:17.476" endtime="20260115 10:11:17.542"/>
+<status status="PASS" starttime="20260115 11:08:47.225" endtime="20260115 11:08:47.283"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${ALL_ITEMS}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:17.544" level="INFO">Clicking element 'id=inventory_sidebar_link'.</msg>
-<status status="PASS" starttime="20260115 10:11:17.544" endtime="20260115 10:11:17.790"/>
+<msg timestamp="20260115 11:08:47.285" level="INFO">Clicking element 'id=inventory_sidebar_link'.</msg>
+<status status="PASS" starttime="20260115 11:08:47.285" endtime="20260115 11:08:47.482"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:19.798" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20260115 10:11:17.797" endtime="20260115 10:11:19.798"/>
+<msg timestamp="20260115 11:08:49.486" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20260115 11:08:47.485" endtime="20260115 11:08:49.486"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>id=inventory_container</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:19.800" endtime="20260115 10:11:19.875"/>
+<status status="PASS" starttime="20260115 11:08:49.487" endtime="20260115 11:08:49.534"/>
 </kw>
 <kw name="Page Should Contain" library="SeleniumLibrary">
 <arg>Products</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<msg timestamp="20260115 10:11:20.004" level="INFO">Current page contains text 'Products'.</msg>
-<status status="PASS" starttime="20260115 10:11:19.876" endtime="20260115 10:11:20.004"/>
+<msg timestamp="20260115 11:08:49.554" level="INFO">Current page contains text 'Products'.</msg>
+<status status="PASS" starttime="20260115 11:08:49.535" endtime="20260115 11:08:49.554"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260115 10:11:20.005" endtime="20260115 10:11:22.458"/>
+<status status="PASS" starttime="20260115 11:08:49.555" endtime="20260115 11:08:52.242"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:07.861" endtime="20260115 10:11:22.460"/>
+<status status="PASS" starttime="20260115 11:08:38.517" endtime="20260115 11:08:52.243"/>
 </test>
 <test id="s1-t8" name="Test Menu Persistence After Invalid Click" line="95">
 <kw name="Setup Test" type="SETUP">
@@ -1234,14 +1234,14 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260115 10:11:22.463" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20260115 10:11:22.462" endtime="20260115 10:11:25.459"/>
+<msg timestamp="20260115 11:08:52.247" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260115 11:08:52.247" endtime="20260115 11:08:54.734"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260115 10:11:25.459" endtime="20260115 10:11:25.500"/>
+<status status="PASS" starttime="20260115 11:08:54.734" endtime="20260115 11:08:54.801"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:22.462" endtime="20260115 10:11:25.500"/>
+<status status="PASS" starttime="20260115 11:08:52.246" endtime="20260115 11:08:54.802"/>
 </kw>
 <kw name="Load Test Data">
 <arg>test_menu_persistence</arg>
@@ -1249,25 +1249,25 @@
 <var>${json}</var>
 <arg>${JSON_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20260115 10:11:25.503" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
-<status status="PASS" starttime="20260115 10:11:25.502" endtime="20260115 10:11:25.504"/>
+<msg timestamp="20260115 11:08:54.805" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
+<status status="PASS" starttime="20260115 11:08:54.803" endtime="20260115 11:08:54.805"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${test}</var>
 <arg>${json}</arg>
 <arg>${test_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:25.504" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Persistance du menu aprÃ¨s clic invalide'}</msg>
-<status status="PASS" starttime="20260115 10:11:25.504" endtime="20260115 10:11:25.504"/>
+<msg timestamp="20260115 11:08:54.806" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Persistance du menu aprÃ¨s clic invalide'}</msg>
+<status status="PASS" starttime="20260115 11:08:54.805" endtime="20260115 11:08:54.806"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${TEST_DATA}</arg>
 <arg>${test}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20260115 10:11:25.505" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Persistance du menu aprÃ¨s clic invalide'}</msg>
-<status status="PASS" starttime="20260115 10:11:25.505" endtime="20260115 10:11:25.505"/>
+<msg timestamp="20260115 11:08:54.806" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Persistance du menu aprÃ¨s clic invalide'}</msg>
+<status status="PASS" starttime="20260115 11:08:54.806" endtime="20260115 11:08:54.806"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:25.502" endtime="20260115 10:11:25.505"/>
+<status status="PASS" starttime="20260115 11:08:54.802" endtime="20260115 11:08:54.807"/>
 </kw>
 <kw name="Login">
 <kw name="Get From Dictionary" library="Collections">
@@ -1275,38 +1275,38 @@
 <arg>${TEST_DATA}</arg>
 <arg>username</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:25.537" level="INFO">${username} = standard_user</msg>
-<status status="PASS" starttime="20260115 10:11:25.535" endtime="20260115 10:11:25.537"/>
+<msg timestamp="20260115 11:08:54.808" level="INFO">${username} = standard_user</msg>
+<status status="PASS" starttime="20260115 11:08:54.808" endtime="20260115 11:08:54.808"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${password}</var>
 <arg>${TEST_DATA}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:25.538" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20260115 10:11:25.538" endtime="20260115 10:11:25.538"/>
+<msg timestamp="20260115 11:08:54.809" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20260115 11:08:54.809" endtime="20260115 11:08:54.809"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:25.549" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20260115 10:11:25.538" endtime="20260115 10:11:26.172"/>
+<msg timestamp="20260115 11:08:54.810" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260115 11:08:54.809" endtime="20260115 11:08:55.205"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:26.173" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20260115 10:11:26.302" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20260115 10:11:26.504" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20260115 10:11:26.172" endtime="20260115 10:11:26.504"/>
+<msg timestamp="20260115 11:08:55.206" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260115 11:08:55.348" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260115 11:08:55.872" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260115 11:08:55.205" endtime="20260115 11:08:55.872"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:26.505" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20260115 10:11:26.504" endtime="20260115 10:11:26.701"/>
+<msg timestamp="20260115 11:08:55.873" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260115 11:08:55.872" endtime="20260115 11:08:56.404"/>
 </kw>
 <kw name="Handle Password Popup">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -1317,86 +1317,86 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:11:26.987" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-24.png"&gt;&lt;img src="selenium-screenshot-24.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260115 10:11:26.987" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
-<status status="FAIL" starttime="20260115 10:11:26.702" endtime="20260115 10:11:26.993"/>
+<msg timestamp="20260115 11:08:56.769" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-8.png"&gt;&lt;img src="selenium-screenshot-8.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260115 11:08:56.769" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
+<status status="FAIL" starttime="20260115 11:08:56.405" endtime="20260115 11:08:56.774"/>
 </kw>
-<msg timestamp="20260115 10:11:26.994" level="INFO">${popup_exists} = False</msg>
-<status status="PASS" starttime="20260115 10:11:26.702" endtime="20260115 10:11:26.994"/>
+<msg timestamp="20260115 11:08:56.774" level="INFO">${popup_exists} = False</msg>
+<status status="PASS" starttime="20260115 11:08:56.405" endtime="20260115 11:08:56.774"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${popup_exists}</arg>
 <arg>Click Element</arg>
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:11:26.994" endtime="20260115 10:11:26.995"/>
+<status status="PASS" starttime="20260115 11:08:56.774" endtime="20260115 11:08:56.775"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:27.999" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:26.995" endtime="20260115 10:11:27.999"/>
+<msg timestamp="20260115 11:08:57.778" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:56.775" endtime="20260115 11:08:57.778"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:26.701" endtime="20260115 10:11:27.999"/>
+<status status="PASS" starttime="20260115 11:08:56.404" endtime="20260115 11:08:57.779"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:28.000" endtime="20260115 10:11:28.114"/>
+<status status="PASS" starttime="20260115 11:08:57.779" endtime="20260115 11:08:57.853"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:25.534" endtime="20260115 10:11:28.114"/>
+<status status="PASS" starttime="20260115 11:08:54.808" endtime="20260115 11:08:57.853"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:29.119" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:28.118" endtime="20260115 10:11:29.119"/>
+<msg timestamp="20260115 11:08:58.855" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:57.854" endtime="20260115 11:08:58.855"/>
 </kw>
 <kw name="Open Menu">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:29.121" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260115 10:11:29.121" endtime="20260115 10:11:29.249"/>
+<msg timestamp="20260115 11:08:58.860" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260115 11:08:58.857" endtime="20260115 11:08:58.985"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:30.251" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:29.250" endtime="20260115 10:11:30.252"/>
+<msg timestamp="20260115 11:08:59.987" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:08:58.985" endtime="20260115 11:08:59.987"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:29.120" endtime="20260115 10:11:30.252"/>
+<status status="PASS" starttime="20260115 11:08:58.856" endtime="20260115 11:08:59.987"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_WRAP}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:30.254" endtime="20260115 10:11:30.300"/>
+<status status="PASS" starttime="20260115 11:08:59.989" endtime="20260115 11:09:00.104"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=inventory_container</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:30.302" level="INFO">Clicking element 'id=inventory_container'.</msg>
-<status status="PASS" starttime="20260115 10:11:30.302" endtime="20260115 10:11:30.493"/>
+<msg timestamp="20260115 11:09:00.107" level="INFO">Clicking element 'id=inventory_container'.</msg>
+<status status="PASS" starttime="20260115 11:09:00.106" endtime="20260115 11:09:00.239"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:31.495" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:30.495" endtime="20260115 10:11:31.495"/>
+<msg timestamp="20260115 11:09:01.241" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:09:00.239" endtime="20260115 11:09:01.241"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>${MENU_WRAP}</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:11:31.534" level="INFO">Element 'class=bm-menu-wrap' is displayed.</msg>
-<status status="PASS" starttime="20260115 10:11:31.496" endtime="20260115 10:11:31.534"/>
+<msg timestamp="20260115 11:09:01.288" level="INFO">Element 'class=bm-menu-wrap' is displayed.</msg>
+<status status="PASS" starttime="20260115 11:09:01.243" endtime="20260115 11:09:01.288"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260115 10:11:31.535" endtime="20260115 10:11:33.833"/>
+<status status="PASS" starttime="20260115 11:09:01.289" endtime="20260115 11:09:03.655"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:22.461" endtime="20260115 10:11:33.833"/>
+<status status="PASS" starttime="20260115 11:08:52.245" endtime="20260115 11:09:03.656"/>
 </test>
 <test id="s1-t9" name="Test Menu As Non Blocking Element" line="105">
 <kw name="Setup Test" type="SETUP">
@@ -1404,14 +1404,14 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260115 10:11:33.836" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20260115 10:11:33.835" endtime="20260115 10:11:36.731"/>
+<msg timestamp="20260115 11:09:03.658" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260115 11:09:03.658" endtime="20260115 11:09:06.235"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260115 10:11:36.731" endtime="20260115 10:11:36.819"/>
+<status status="PASS" starttime="20260115 11:09:06.235" endtime="20260115 11:09:06.292"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:33.835" endtime="20260115 10:11:36.819"/>
+<status status="PASS" starttime="20260115 11:09:03.657" endtime="20260115 11:09:06.292"/>
 </kw>
 <kw name="Load Test Data">
 <arg>test_menu_non_blocking</arg>
@@ -1419,25 +1419,25 @@
 <var>${json}</var>
 <arg>${JSON_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20260115 10:11:36.830" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
-<status status="PASS" starttime="20260115 10:11:36.829" endtime="20260115 10:11:36.830"/>
+<msg timestamp="20260115 11:09:06.294" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
+<status status="PASS" starttime="20260115 11:09:06.293" endtime="20260115 11:09:06.295"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${test}</var>
 <arg>${json}</arg>
 <arg>${test_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:36.836" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Menu burger comme Ã©lÃ©ment non-bloquant'}</msg>
-<status status="PASS" starttime="20260115 10:11:36.831" endtime="20260115 10:11:36.836"/>
+<msg timestamp="20260115 11:09:06.296" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Menu burger comme Ã©lÃ©ment non-bloquant'}</msg>
+<status status="PASS" starttime="20260115 11:09:06.295" endtime="20260115 11:09:06.296"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${TEST_DATA}</arg>
 <arg>${test}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20260115 10:11:36.836" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Menu burger comme Ã©lÃ©ment non-bloquant'}</msg>
-<status status="PASS" starttime="20260115 10:11:36.836" endtime="20260115 10:11:36.837"/>
+<msg timestamp="20260115 11:09:06.297" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Menu burger comme Ã©lÃ©ment non-bloquant'}</msg>
+<status status="PASS" starttime="20260115 11:09:06.296" endtime="20260115 11:09:06.297"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:36.828" endtime="20260115 10:11:36.837"/>
+<status status="PASS" starttime="20260115 11:09:06.293" endtime="20260115 11:09:06.297"/>
 </kw>
 <kw name="Login">
 <kw name="Get From Dictionary" library="Collections">
@@ -1445,38 +1445,38 @@
 <arg>${TEST_DATA}</arg>
 <arg>username</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:36.882" level="INFO">${username} = standard_user</msg>
-<status status="PASS" starttime="20260115 10:11:36.881" endtime="20260115 10:11:36.882"/>
+<msg timestamp="20260115 11:09:06.311" level="INFO">${username} = standard_user</msg>
+<status status="PASS" starttime="20260115 11:09:06.310" endtime="20260115 11:09:06.311"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${password}</var>
 <arg>${TEST_DATA}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:36.883" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20260115 10:11:36.883" endtime="20260115 10:11:36.883"/>
+<msg timestamp="20260115 11:09:06.317" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20260115 11:09:06.314" endtime="20260115 11:09:06.317"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:36.884" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20260115 10:11:36.884" endtime="20260115 10:11:37.448"/>
+<msg timestamp="20260115 11:09:06.318" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260115 11:09:06.317" endtime="20260115 11:09:06.610"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:37.449" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20260115 10:11:37.644" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20260115 10:11:38.036" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20260115 10:11:37.449" endtime="20260115 10:11:38.036"/>
+<msg timestamp="20260115 11:09:06.611" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260115 11:09:06.694" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260115 11:09:06.796" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260115 11:09:06.610" endtime="20260115 11:09:06.796"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:38.037" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20260115 10:11:38.036" endtime="20260115 10:11:38.371"/>
+<msg timestamp="20260115 11:09:06.797" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260115 11:09:06.796" endtime="20260115 11:09:07.169"/>
 </kw>
 <kw name="Handle Password Popup">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -1487,77 +1487,77 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:11:38.680" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-25.png"&gt;&lt;img src="selenium-screenshot-25.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260115 10:11:38.681" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
-<status status="FAIL" starttime="20260115 10:11:38.372" endtime="20260115 10:11:38.684"/>
+<msg timestamp="20260115 11:09:07.472" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-9.png"&gt;&lt;img src="selenium-screenshot-9.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260115 11:09:07.472" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
+<status status="FAIL" starttime="20260115 11:09:07.170" endtime="20260115 11:09:07.479"/>
 </kw>
-<msg timestamp="20260115 10:11:38.684" level="INFO">${popup_exists} = False</msg>
-<status status="PASS" starttime="20260115 10:11:38.372" endtime="20260115 10:11:38.684"/>
+<msg timestamp="20260115 11:09:07.479" level="INFO">${popup_exists} = False</msg>
+<status status="PASS" starttime="20260115 11:09:07.169" endtime="20260115 11:09:07.479"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${popup_exists}</arg>
 <arg>Click Element</arg>
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:11:38.685" endtime="20260115 10:11:38.685"/>
+<status status="PASS" starttime="20260115 11:09:07.479" endtime="20260115 11:09:07.480"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:39.689" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:38.685" endtime="20260115 10:11:39.692"/>
+<msg timestamp="20260115 11:09:08.481" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:09:07.480" endtime="20260115 11:09:08.481"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:38.371" endtime="20260115 10:11:39.701"/>
+<status status="PASS" starttime="20260115 11:09:07.169" endtime="20260115 11:09:08.481"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:39.702" endtime="20260115 10:11:39.817"/>
+<status status="PASS" starttime="20260115 11:09:08.482" endtime="20260115 11:09:08.552"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:36.881" endtime="20260115 10:11:39.818"/>
+<status status="PASS" starttime="20260115 11:09:06.310" endtime="20260115 11:09:08.552"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:40.839" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:39.838" endtime="20260115 10:11:40.839"/>
+<msg timestamp="20260115 11:09:09.555" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:09:08.554" endtime="20260115 11:09:09.556"/>
 </kw>
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>id=inventory_container</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:11:40.892" level="INFO">Element 'id=inventory_container' is displayed.</msg>
-<status status="PASS" starttime="20260115 10:11:40.840" endtime="20260115 10:11:40.892"/>
+<msg timestamp="20260115 11:09:09.611" level="INFO">Element 'id=inventory_container' is displayed.</msg>
+<status status="PASS" starttime="20260115 11:09:09.557" endtime="20260115 11:09:09.611"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>id=inventory_container</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:40.894" level="INFO">Clicking element 'id=inventory_container'.</msg>
-<status status="PASS" starttime="20260115 10:11:40.894" endtime="20260115 10:11:41.034"/>
+<msg timestamp="20260115 11:09:09.612" level="INFO">Clicking element 'id=inventory_container'.</msg>
+<status status="PASS" starttime="20260115 11:09:09.612" endtime="20260115 11:09:09.711"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:42.036" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:41.035" endtime="20260115 10:11:42.036"/>
+<msg timestamp="20260115 11:09:10.712" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:09:09.712" endtime="20260115 11:09:10.713"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${CART_LINK}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:42.038" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
-<status status="PASS" starttime="20260115 10:11:42.037" endtime="20260115 10:11:42.182"/>
+<msg timestamp="20260115 11:09:10.715" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
+<status status="PASS" starttime="20260115 11:09:10.714" endtime="20260115 11:09:10.899"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>id=cart_contents_container</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:42.182" endtime="20260115 10:11:42.233"/>
+<status status="PASS" starttime="20260115 11:09:10.901" endtime="20260115 11:09:10.959"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260115 10:11:42.234" endtime="20260115 10:11:44.576"/>
+<status status="PASS" starttime="20260115 11:09:10.960" endtime="20260115 11:09:13.595"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:33.834" endtime="20260115 10:11:44.578"/>
+<status status="PASS" starttime="20260115 11:09:03.657" endtime="20260115 11:09:13.596"/>
 </test>
 <test id="s1-t10" name="Test Multiple Clicks On Menu Button" line="115">
 <kw name="Setup Test" type="SETUP">
@@ -1565,14 +1565,14 @@
 <arg>${URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20260115 10:11:44.581" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<status status="PASS" starttime="20260115 10:11:44.580" endtime="20260115 10:11:47.462"/>
+<msg timestamp="20260115 11:09:13.600" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20260115 11:09:13.599" endtime="20260115 11:09:16.031"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20260115 10:11:47.462" endtime="20260115 10:11:47.552"/>
+<status status="PASS" starttime="20260115 11:09:16.031" endtime="20260115 11:09:16.137"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:44.580" endtime="20260115 10:11:47.552"/>
+<status status="PASS" starttime="20260115 11:09:13.599" endtime="20260115 11:09:16.137"/>
 </kw>
 <kw name="Load Test Data">
 <arg>test_multiple_menu_clicks</arg>
@@ -1580,25 +1580,25 @@
 <var>${json}</var>
 <arg>${JSON_FILE}</arg>
 <doc>Load JSON from file.</doc>
-<msg timestamp="20260115 10:11:47.564" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
-<status status="PASS" starttime="20260115 10:11:47.562" endtime="20260115 10:11:47.564"/>
+<msg timestamp="20260115 11:09:16.150" level="INFO">${json} = {'test_open_menu': {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Test ouverture du menu burger'}, 'test_verify_options': {'username': 'standard_user', 'password': 'secret_s...</msg>
+<status status="PASS" starttime="20260115 11:09:16.148" endtime="20260115 11:09:16.150"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${test}</var>
 <arg>${json}</arg>
 <arg>${test_name}</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:47.653" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Clics multiples rapides sur le bouton burger'}</msg>
-<status status="PASS" starttime="20260115 10:11:47.564" endtime="20260115 10:11:47.653"/>
+<msg timestamp="20260115 11:09:16.153" level="INFO">${test} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Clics multiples rapides sur le bouton burger'}</msg>
+<status status="PASS" starttime="20260115 11:09:16.150" endtime="20260115 11:09:16.153"/>
 </kw>
 <kw name="Set Suite Variable" library="BuiltIn">
 <arg>${TEST_DATA}</arg>
 <arg>${test}</arg>
 <doc>Makes a variable available everywhere within the scope of the current suite.</doc>
-<msg timestamp="20260115 10:11:47.655" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Clics multiples rapides sur le bouton burger'}</msg>
-<status status="PASS" starttime="20260115 10:11:47.654" endtime="20260115 10:11:47.659"/>
+<msg timestamp="20260115 11:09:16.154" level="INFO">${TEST_DATA} = {'username': 'standard_user', 'password': 'secret_sauce', 'description': 'Clics multiples rapides sur le bouton burger'}</msg>
+<status status="PASS" starttime="20260115 11:09:16.154" endtime="20260115 11:09:16.154"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:47.562" endtime="20260115 10:11:47.661"/>
+<status status="PASS" starttime="20260115 11:09:16.147" endtime="20260115 11:09:16.157"/>
 </kw>
 <kw name="Login">
 <kw name="Get From Dictionary" library="Collections">
@@ -1606,38 +1606,38 @@
 <arg>${TEST_DATA}</arg>
 <arg>username</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:47.667" level="INFO">${username} = standard_user</msg>
-<status status="PASS" starttime="20260115 10:11:47.666" endtime="20260115 10:11:47.667"/>
+<msg timestamp="20260115 11:09:16.162" level="INFO">${username} = standard_user</msg>
+<status status="PASS" starttime="20260115 11:09:16.162" endtime="20260115 11:09:16.162"/>
 </kw>
 <kw name="Get From Dictionary" library="Collections">
 <var>${password}</var>
 <arg>${TEST_DATA}</arg>
 <arg>password</arg>
 <doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
-<msg timestamp="20260115 10:11:47.667" level="INFO">${password} = secret_sauce</msg>
-<status status="PASS" starttime="20260115 10:11:47.667" endtime="20260115 10:11:47.668"/>
+<msg timestamp="20260115 11:09:16.187" level="INFO">${password} = secret_sauce</msg>
+<status status="PASS" starttime="20260115 11:09:16.162" endtime="20260115 11:09:16.187"/>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>id=user-name</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:47.668" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
-<status status="PASS" starttime="20260115 10:11:47.668" endtime="20260115 10:11:48.152"/>
+<msg timestamp="20260115 11:09:16.188" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<status status="PASS" starttime="20260115 11:09:16.187" endtime="20260115 11:09:16.967"/>
 </kw>
 <kw name="Input Password" library="SeleniumLibrary">
 <arg>id=password</arg>
 <arg>${password}</arg>
 <doc>Types the given password into the text field identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:48.153" level="INFO">Typing password into text field 'id=password'.</msg>
-<msg timestamp="20260115 10:11:48.271" level="INFO">Temporally setting log level to: NONE</msg>
-<msg timestamp="20260115 10:11:48.901" level="INFO">Log level changed from NONE to INFO.</msg>
-<status status="PASS" starttime="20260115 10:11:48.153" endtime="20260115 10:11:48.901"/>
+<msg timestamp="20260115 11:09:16.968" level="INFO">Typing password into text field 'id=password'.</msg>
+<msg timestamp="20260115 11:09:17.172" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20260115 11:09:17.347" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20260115 11:09:16.967" endtime="20260115 11:09:17.348"/>
 </kw>
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>id=login-button</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:48.902" level="INFO">Clicking button 'id=login-button'.</msg>
-<status status="PASS" starttime="20260115 10:11:48.901" endtime="20260115 10:11:49.692"/>
+<msg timestamp="20260115 11:09:17.348" level="INFO">Clicking button 'id=login-button'.</msg>
+<status status="PASS" starttime="20260115 11:09:17.348" endtime="20260115 11:09:17.631"/>
 </kw>
 <kw name="Handle Password Popup">
 <kw name="Run Keyword And Return Status" library="BuiltIn">
@@ -1648,153 +1648,153 @@
 <kw name="Element Should Be Visible" library="SeleniumLibrary">
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<msg timestamp="20260115 10:11:49.988" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-26.png"&gt;&lt;img src="selenium-screenshot-26.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260115 10:11:49.989" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
-<status status="FAIL" starttime="20260115 10:11:49.693" endtime="20260115 10:11:49.993"/>
+<msg timestamp="20260115 11:09:17.934" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-10.png"&gt;&lt;img src="selenium-screenshot-10.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260115 11:09:17.935" level="FAIL">Element with locator 'xpath=//button[contains(text(), 'Not now')]' not found.</msg>
+<status status="FAIL" starttime="20260115 11:09:17.632" endtime="20260115 11:09:17.937"/>
 </kw>
-<msg timestamp="20260115 10:11:49.993" level="INFO">${popup_exists} = False</msg>
-<status status="PASS" starttime="20260115 10:11:49.693" endtime="20260115 10:11:49.993"/>
+<msg timestamp="20260115 11:09:17.937" level="INFO">${popup_exists} = False</msg>
+<status status="PASS" starttime="20260115 11:09:17.632" endtime="20260115 11:09:17.938"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${popup_exists}</arg>
 <arg>Click Element</arg>
 <arg>xpath=//button[contains(text(), 'Not now')]</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="PASS" starttime="20260115 10:11:49.994" endtime="20260115 10:11:49.994"/>
+<status status="PASS" starttime="20260115 11:09:17.938" endtime="20260115 11:09:17.938"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:50.998" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:49.994" endtime="20260115 10:11:50.999"/>
+<msg timestamp="20260115 11:09:18.956" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:09:17.938" endtime="20260115 11:09:18.957"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:49.692" endtime="20260115 10:11:50.999"/>
+<status status="PASS" starttime="20260115 11:09:17.631" endtime="20260115 11:09:18.962"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <arg>timeout=15s</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20260115 10:11:50.999" endtime="20260115 10:11:51.093"/>
+<status status="PASS" starttime="20260115 11:09:18.964" endtime="20260115 11:09:19.032"/>
 </kw>
-<status status="PASS" starttime="20260115 10:11:47.665" endtime="20260115 10:11:51.093"/>
+<status status="PASS" starttime="20260115 11:09:16.161" endtime="20260115 11:09:19.032"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20260115 10:11:52.101" level="INFO">Slept 1 second</msg>
-<status status="PASS" starttime="20260115 10:11:51.100" endtime="20260115 10:11:52.101"/>
+<msg timestamp="20260115 11:09:20.033" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20260115 11:09:19.032" endtime="20260115 11:09:20.034"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:52.102" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
-<status status="PASS" starttime="20260115 10:11:52.102" endtime="20260115 10:11:52.230"/>
+<msg timestamp="20260115 11:09:20.036" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<status status="PASS" starttime="20260115 11:09:20.035" endtime="20260115 11:09:20.154"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20260115 10:11:52.233" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
-<msg timestamp="20260115 10:11:53.680" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-27.png"&gt;&lt;img src="selenium-screenshot-27.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20260115 10:11:53.681" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" id="react-burger-menu-btn" style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; font-size: 0px; background: transparent; cursor: pointer;"&gt;...&lt;/button&gt; is not clickable at point (30, 30). Other element would receive the click: &lt;div class="bm-menu" style="height: 100%; box-sizing: border-box; overflow: auto;"&gt;...&lt;/div&gt;
+<msg timestamp="20260115 11:09:20.155" level="INFO">Clicking element 'id=react-burger-menu-btn'.</msg>
+<msg timestamp="20260115 11:09:21.450" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-11.png"&gt;&lt;img src="selenium-screenshot-11.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20260115 11:09:21.451" level="FAIL">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" id="react-burger-menu-btn" style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; font-size: 0px; background: transparent; cursor: pointer;"&gt;...&lt;/button&gt; is not clickable at point (30, 30). Other element would receive the click: &lt;div class="bm-menu" style="height: 100%; box-sizing: border-box; overflow: auto;"&gt;...&lt;/div&gt;
   (Session info: chrome=143.0.7499.194); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
 Stacktrace:
 Symbols not available. Dumping unresolved backtrace:
-	0x7ff6b57588d5
-	0x7ff6b5758930
-	0x7ff6b553165d
-	0x7ff6b55919e8
-	0x7ff6b558f40f
-	0x7ff6b558c417
-	0x7ff6b558b338
-	0x7ff6b557ce7f
-	0x7ff6b55b1fda
-	0x7ff6b557c746
-	0x7ff6b55dac97
-	0x7ff6b557ac29
-	0x7ff6b557ba93
-	0x7ff6b5a70620
-	0x7ff6b5a6af60
-	0x7ff6b5a896c6
-	0x7ff6b5775dd4
-	0x7ff6b577ed7c
-	0x7ff6b5761ff4
-	0x7ff6b57621a5
-	0x7ff6b5747ed2
+	0x7ff7659488d5
+	0x7ff765948930
+	0x7ff76572165d
+	0x7ff7657819e8
+	0x7ff76577f40f
+	0x7ff76577c417
+	0x7ff76577b338
+	0x7ff76576d23f
+	0x7ff7657a1fda
+	0x7ff76576c746
+	0x7ff7657cac97
+	0x7ff76576ac29
+	0x7ff76576ba93
+	0x7ff765c60620
+	0x7ff765c5af60
+	0x7ff765c796c6
+	0x7ff765965dd4
+	0x7ff76596ed7c
+	0x7ff765951ff4
+	0x7ff7659521a5
+	0x7ff765937ed2
 	0x7fff92a9e8d7
 	0x7fff949ec53c
 </msg>
-<status status="FAIL" starttime="20260115 10:11:52.232" endtime="20260115 10:11:53.686"/>
+<status status="FAIL" starttime="20260115 11:09:20.155" endtime="20260115 11:09:21.459"/>
 </kw>
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>${MENU_BTN}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" starttime="20260115 10:11:53.688" endtime="20260115 10:11:53.688"/>
+<status status="NOT RUN" starttime="20260115 11:09:21.460" endtime="20260115 11:09:21.460"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20260115 10:11:53.688" endtime="20260115 10:11:53.688"/>
+<status status="NOT RUN" starttime="20260115 11:09:21.461" endtime="20260115 11:09:21.461"/>
 </kw>
 <kw name="Run Keyword And Return Status" library="BuiltIn">
 <var>${menu_visible}</var>
 <arg>Element Should Be Visible</arg>
 <arg>${MENU_WRAP}</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="NOT RUN" starttime="20260115 10:11:53.689" endtime="20260115 10:11:53.689"/>
+<status status="NOT RUN" starttime="20260115 11:09:21.461" endtime="20260115 11:09:21.461"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>${menu_visible}</arg>
 <arg>Log</arg>
 <arg>Menu is open as expected</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20260115 10:11:53.690" endtime="20260115 10:11:53.690"/>
+<status status="NOT RUN" starttime="20260115 11:09:21.462" endtime="20260115 11:09:21.462"/>
 </kw>
 <kw name="Run Keyword If" library="BuiltIn">
 <arg>not ${menu_visible}</arg>
 <arg>Log</arg>
 <arg>Menu is closed as expected</arg>
 <doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
-<status status="NOT RUN" starttime="20260115 10:11:53.691" endtime="20260115 10:11:53.691"/>
+<status status="NOT RUN" starttime="20260115 11:09:21.462" endtime="20260115 11:09:21.462"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20260115 10:11:53.692" endtime="20260115 10:11:53.692"/>
+<status status="NOT RUN" starttime="20260115 11:09:21.462" endtime="20260115 11:09:21.462"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20260115 10:11:53.693" endtime="20260115 10:11:56.643"/>
+<status status="PASS" starttime="20260115 11:09:21.463" endtime="20260115 11:09:24.098"/>
 </kw>
-<status status="FAIL" starttime="20260115 10:11:44.580" endtime="20260115 10:11:56.684">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" id="react-burger-menu-btn" style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; font-size: 0px; background: transparent; cursor: pointer;"&gt;...&lt;/button&gt; is not clickable at point (30, 30). Other element would receive the click: &lt;div class="bm-menu" style="height: 100%; box-sizing: border-box; overflow: auto;"&gt;...&lt;/div&gt;
+<status status="FAIL" starttime="20260115 11:09:13.598" endtime="20260115 11:09:24.101">ElementClickInterceptedException: Message: element click intercepted: Element &lt;button type="button" id="react-burger-menu-btn" style="position: absolute; left: 0px; top: 0px; z-index: 1; width: 100%; height: 100%; margin: 0px; padding: 0px; border: none; font-size: 0px; background: transparent; cursor: pointer;"&gt;...&lt;/button&gt; is not clickable at point (30, 30). Other element would receive the click: &lt;div class="bm-menu" style="height: 100%; box-sizing: border-box; overflow: auto;"&gt;...&lt;/div&gt;
   (Session info: chrome=143.0.7499.194); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
 Stacktrace:
 Symbols not available. Dumping unresolved backtrace:
-	0x7ff6b57588d5
-	0x7ff6b5758930
-	0x7ff6b553165d
-	0x7ff6b55919e8
-	0x7ff6b558f40f
-	0x7ff6b558c417
-	0x7ff6b558b338
-	0x7ff6b557ce7f
-	0x7ff6b55b1fda
-	0x7ff6b557c746
-	0x7ff6b55dac97
-	0x7ff6b557ac29
-	0x7ff6b557ba93
-	0x7ff6b5a70620
-	0x7ff6b5a6af60
-	0x7ff6b5a896c6
-	0x7ff6b5775dd4
-	0x7ff6b577ed7c
-	0x7ff6b5761ff4
-	0x7ff6b57621a5
-	0x7ff6b5747ed2
+	0x7ff7659488d5
+	0x7ff765948930
+	0x7ff76572165d
+	0x7ff7657819e8
+	0x7ff76577f40f
+	0x7ff76577c417
+	0x7ff76577b338
+	0x7ff76576d23f
+	0x7ff7657a1fda
+	0x7ff76576c746
+	0x7ff7657cac97
+	0x7ff76576ac29
+	0x7ff76576ba93
+	0x7ff765c60620
+	0x7ff765c5af60
+	0x7ff765c796c6
+	0x7ff765965dd4
+	0x7ff76596ed7c
+	0x7ff765951ff4
+	0x7ff7659521a5
+	0x7ff765937ed2
 	0x7fff92a9e8d7
 	0x7fff949ec53c
 </status>
 </test>
-<status status="FAIL" starttime="20260115 10:09:49.531" endtime="20260115 10:11:56.694"/>
+<status status="FAIL" starttime="20260115 11:07:17.675" endtime="20260115 11:09:24.140"/>
 </suite>
 <statistics>
 <total>
@@ -1803,7 +1803,7 @@ Symbols not available. Dumping unresolved backtrace:
 <tag>
 </tag>
 <suite>
-<stat pass="9" fail="1" skip="0" id="s1" name="Test Plus">Test Plus</stat>
+<stat pass="9" fail="1" skip="0" id="s1" name="Test Menu Burger">Test Menu Burger</stat>
 </suite>
 </statistics>
 <errors>

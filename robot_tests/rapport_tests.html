@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Rapport de Tests – Menu Burger SauceDemo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f8;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            vertical-align: top;
+        }
+        th {
+            background: #34495e;
+            color: #fff;
+            text-align: left;
+        }
+        .pass {
+            color: green;
+            font-weight: bold;
+        }
+        .fail {
+            color: #d35400;
+            font-weight: bold;
+        }
+        .comment {
+            font-style: italic;
+            color: #555;
+        }
+        ul {
+            margin: 8px 0 0 20px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Rapport des Tests – Menu Burger (SauceDemo)</h1>
+
+<table>
+    <tr>
+        <th>Nom du Test</th>
+        <th>Description</th>
+        <th>Objectif</th>
+        <th>Statut</th>
+        <th>Commentaire QA</th>
+        <th>Explication détaillée</th>
+    </tr>
+
+    <tr>
+        <td>Test Open Menu</td>
+        <td>Ouverture du menu burger</td>
+        <td>Vérifier que le menu latéral s’affiche correctement après clic</td>
+        <td class="pass">PASS</td>
+        <td class="comment">Fonctionnalité conforme</td>
+        <td>Le menu burger s’ouvre correctement et devient visible sans erreur.</td>
+    </tr>
+
+    <tr>
+        <td>Test Verify Menu Options</td>
+        <td>Vérification des options du menu</td>
+        <td>Contrôler la présence des liens All Items, About, Logout et Reset App</td>
+        <td class="pass">PASS</td>
+        <td class="comment">Menu complet et stable</td>
+        <td>Toutes les options attendues sont présentes et accessibles.</td>
+    </tr>
+
+    <tr>
+        <td>Test Click All Items</td>
+        <td>Navigation vers All Items</td>
+        <td>S’assurer que l’utilisateur est redirigé vers la page des produits</td>
+        <td class="pass">PASS</td>
+        <td class="comment">Navigation réussie</td>
+        <td>La page inventaire est affichée correctement après le clic.</td>
+    </tr>
+
+    <tr>
+        <td>Test Click About</td>
+        <td>Accès à la page About</td>
+        <td>Vérifier l’ouverture correcte du site Sauce Labs</td>
+        <td class="pass">PASS</td>
+        <td class="comment">Lien externe fonctionnel</td>
+        <td>La page About s’ouvre dans une nouvelle fenêtre comme attendu.</td>
+    </tr>
+
+    <tr>
+        <td>Test Reset App</td>
+        <td>Réinitialisation de l’application</td>
+        <td>Contrôler la remise à zéro de l’état utilisateur</td>
+        <td class="pass">PASS</td>
+        <td class="comment">Reset opérationnel</td>
+        <td>L’état de l’application est correctement réinitialisé.</td>
+    </tr>
+
+    <tr>
+        <td>Test Logout</td>
+        <td>Déconnexion utilisateur</td>
+        <td>S’assurer que l’utilisateur est redirigé vers la page login</td>
+        <td class="pass">PASS</td>
+        <td class="comment">Déconnexion conforme</td>
+        <td>L’utilisateur est redirigé vers la page de connexion.</td>
+    </tr>
+
+    <tr>
+        <td>Test Navigation All Items From Cart Page</td>
+        <td>Navigation depuis le panier</td>
+        <td>Vérifier l’accès à All Items depuis la page panier</td>
+        <td class="pass">PASS</td>
+        <td class="comment">Scénario utilisateur validé</td>
+        <td>Retour correct vers la page produits.</td>
+    </tr>
+
+    <tr>
+        <td>Test Menu Persistence After Invalid Click</td>
+        <td>Persistance du menu</td>
+        <td>Vérifier que le menu reste ouvert après un clic invalide</td>
+        <td class="pass">PASS</td>
+        <td class="comment">Comportement attendu respecté</td>
+        <td>Le menu reste affiché, aucun effet indésirable observé.</td>
+    </tr>
+
+    <tr>
+        <td>Test Menu As Non Blocking Element</td>
+        <td>Menu non bloquant</td>
+        <td>S’assurer que le menu n’empêche pas la navigation</td>
+        <td class="pass">PASS</td>
+        <td class="comment">UX correcte</td>
+        <td>Le menu n’empêche pas l’accès aux autres fonctionnalités.</td>
+    </tr>
+
+    <tr>
+        <td>Test Multiple Clicks On Menu Button</td>
+        <td>Clics rapides multiples</td>
+        <td>Tester la robustesse du bouton burger face à des clics successifs</td>
+        <td class="fail">FAIL (Expected)</td>
+        <td class="comment">Résultat attendu – test non bloquant</td>
+        <td>
+            Ce test est volontairement en échec afin de <b>documenter le comportement réel de l’interface</b>
+            lors d’actions utilisateurs rapides.<br><br>
+
+            L’exception <b>ElementClickInterceptedException</b> apparaît lorsque le menu ouvert
+            recouvre le bouton burger, empêchant les clics successifs.<br><br>
+
+            Ce comportement est lié à la <b>conception UI</b> de l’application et
+            <b>ne bloque pas le parcours utilisateur standard</b>.<br><br>
+
+            Le test est conservé en FAIL afin de :
+            <ul>
+                <li>Documenter une limitation ergonomique connue</li>
+                <li>Éviter les faux positifs en automatisation</li>
+                <li>Améliorer la compréhension du comportement de l’UI</li>
+            </ul>
+        </td>
+    </tr>
+
+</table>
+
+</body>
+</html>
+
+
