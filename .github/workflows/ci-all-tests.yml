@@ -1,18 +1,17 @@
-name: CI - All Automation Tests
+name: CI - Automation Tests
 
 on:
   push:
     branches: [ main ]
   pull_request:
-    branches: [ main ]
-
-jobs:
 
 # ===============================
 # 1️⃣ SELENIUM PYTEST
 # ===============================
-  selenium-pytest:
-    name: Selenium Pytest Tests
+jobs:
+
+  selenium:
+    name: Selenium Pytest
     runs-on: ubuntu-latest
 
     steps:
@@ -25,30 +24,30 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip
+          pip install --upgrade pip
           pip install -r requirements.txt
           pip install pytest selenium chromedriver-autoinstaller pytest-html
 
-      - name: Run Selenium Pytest
+      - name: Run Pytest
         run: |
           mkdir -p test-reports
-          pytest Selenium_test1 \
-            --junitxml=test-reports/results.xml || true
+          pytest Selenium_test1 --junitxml=test-reports/results.xml || true
 
-      - name: Upload Selenium report
+      - name: Upload Pytest report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: selenium-test-report
+          name: selenium-report
           path: test-reports/
 
 
 # ===============================
 # 2️⃣ ROBOT FRAMEWORK
 # ===============================
-  robot-framework:
-    name: Robot Framework Tests
+  robot:
+    name: Robot Framework
     runs-on: ubuntu-latest
+    needs: selenium
 
     steps:
       - uses: actions/checkout@v4
@@ -58,7 +57,7 @@ jobs:
         with:
           python-version: 3.10
 
-      - name: Install Robot dependencies
+      - name: Install Robot deps
         run: |
           pip install robotframework
           pip install robotframework-seleniumlibrary
@@ -67,15 +66,16 @@ jobs:
 
       - name: Run Robot tests
         run: |
-          robot --variable BROWSER:headlesschrome \
-                --outputdir robot-results \
-                robot_tests || true
+          robot \
+            --variable BROWSER:headlesschrome \
+            --outputdir robot-results \
+            robot_tests || true
 
-      - name: Upload Robot results
+      - name: Upload Robot report
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: robot-results
+          name: robot-report
           path: robot-results/
 
 
@@ -83,36 +83,29 @@ jobs:
 # 3️⃣ PLAYWRIGHT
 # ===============================
   playwright:
-    name: Playwright E2E Tests
+    name: Playwright E2E
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    needs: robot
 
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: npm
-          cache-dependency-path: playwright_tests/package-lock.json
 
-      - name: Install Playwright dependencies
+      - name: Install deps
         working-directory: playwright_tests
-        run: npm ci
+        run: npm install
 
-      - name: Install Playwright browsers
+      - name: Install browsers
         working-directory: playwright_tests
         run: npx playwright install --with-deps
 
-      - name: Run Playwright tests
+      - name: Run Playwright
         working-directory: playwright_tests
         run: npx playwright test || true
-
-      - name: Debug Playwright report
-        if: always()
-        working-directory: playwright_tests
-        run: ls -la playwright-report || echo "No report generated"
 
       - name: Upload Playwright report
         if: always()
